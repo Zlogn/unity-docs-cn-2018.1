@@ -1,0 +1,223 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="编写后期处理效果 - Unity Manual">
+<title>编写后期处理效果 - Unity Manual</title>
+<meta name="description" content="后期处理是一种在 Unity 中将效果应用于渲染图像的方法。">
+<meta property="og:description" content="后期处理是一种在 Unity 中将效果应用于渲染图像的方法。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PostProcessingWritingEffects';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessingWritingEffects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessingWritingEffects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessingWritingEffects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessingWritingEffects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessingWritingEffects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessingWritingEffects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessingWritingEffects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessingWritingEffects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessingWritingEffects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessingWritingEffects.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/PostProcessingWritingEffects.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/PostProcessingWritingEffects.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/PostProcessingWritingEffects.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/PostProcessingWritingEffects.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessingWritingEffects.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessingWritingEffects.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessingWritingEffects.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessingWritingEffects.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessingWritingEffects.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessingWritingEffects.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessingWritingEffects.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessingWritingEffects.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessingWritingEffects.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessingWritingEffects.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="PostProcessingOverview.html">后期处理概述</a></li>
+<li>编写后期处理效果</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Monitors.html"></a></span><div class="tip">监视器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HDR.html"></a></span><div class="tip">高动态范围渲染</div>
+</div>
+</div></div>
+<h2>编写后期处理效果</h2>
+
+<p><a href="PostProcessingOverview.html">后期处理</a>是一种在 Unity 中将效果应用于渲染图像的方法。</p>
+
+<p>任何使用 <a href="../ScriptReference/Camera.OnRenderImage.html">OnRenderImage</a> 函数的 Unity <a href="CreatingAndUsingScripts.html">脚本</a>都可以用作后期处理效果。必须将其添加到<a href="class-Camera.html">摄像机</a><a href="GameObjects.html">游戏对象</a>才能使脚本执行后期处理。</p>
+
+<h3>OnRenderImage 函数</h3>
+
+<p><a href="../ScriptReference/Camera.OnRenderImage.html">OnRenderImage</a> Unity Scripting API 函数接受两个参数：</p>
+
+<ul>
+<li><p>作为 <a href="class-RenderTexture.html">RenderTexture</a> 的源图像</p></li>
+<li><p>应该渲染到的目标（也是 RenderTexture）。</p></li>
+</ul>
+
+<p>后期处理效果通常使用<a href="class-Shader.html">着色器</a>。这些着色器将读取源图像，对其进行一些计算，并将结果渲染到目标中（例如，使用 <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit</a>）。后期处理效果将完全替代目标的所有像素。</p>
+
+<p>摄像机可以有多个后期处理效果，每个效果都作为<a href="UsingComponents.html">组件</a>。Unity 按照这些效果在 <a href="UsingTheInspector.html">Inspector</a> 中列出的顺序以堆栈形式执行它们；位于 Inspector 顶部的后期处理组件先渲染。在这种情况下，第一个后期处理组件的结果作为“源图像”传递给下一个后期处理组件。在内部，Unity 会创建一个或多个临时渲染纹理以保存这些中间结果。</p>
+
+<p>请注意，后期处理栈中的后期处理组件列表未指定它们的应用顺序。</p>
+
+<p>注意事项：</p>
+
+<ul>
+<li><p>目标渲染纹理可以是 null，这意味着“渲染到屏幕”（即后缓冲区）。摄像机上的最后一个后期处理效果将发生此情况。</p></li>
+<li><p><code>OnRenderImage</code> 完成后，Unity 期望目标渲染纹理是激活的渲染目标。通常情况下，<a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit</a> 或手动渲染到目标纹理应该是最后的渲染操作。</p></li>
+<li><p>在后期处理效果着色器中关闭深度缓冲区写入和测试。这样可确保 <a href="../ScriptReference/Graphics.Blit.html">Graphics.Blit</a> 不会将非预期值写入目标 Z 缓冲区。几乎所有后期处理着色器 pass 都应包含 <code>Cull Off ZWrite Off ZTest Always</code> 状态。</p></li>
+<li><p>要使用原始场景渲染中的模板或深度缓冲区值，请使用 <a href="../ScriptReference/Graphics.SetRenderTarget.html">Graphics.SetRenderTarget</a> 将原始场景渲染中的深度缓冲区显式绑定为深度目标。应传递第一个源图像效果深度缓冲区作为要绑定的深度缓冲区。</p></li>
+</ul>
+
+<h3>渲染不透明对象之后执行后期处理效果</h3>
+
+<p>默认情况下，Unity 在渲染整个场景后执行后期处理效果。在某些情况下，您可能更希望 Unity 在渲染场景中的所有不透明对象之后但在渲染其他对象之前渲染后期处理效果（例如，在渲染<a href="class-Skybox.html">天空盒</a>或<a href="StandardShaderMaterialParameterAlbedoColor.html">透明对象</a>之前）。像景深 (Depth of Field) 这样基于深度的效果经常使用这种方式。</p>
+
+<p>为此，请在 <a href="../ScriptReference/Camera.OnRenderImage.html">OnRenderImage</a> Unity Scripting API 函数中添加 <a href="../ScriptReference/ImageEffectOpaque.html">ImageEffectOpaque</a> 属性。</p>
+
+<h3>不同平台上的纹理坐标</h3>
+
+<p>如果后期处理效果一次采样多个不同的屏幕相关纹理，您可能需要了解不同平台如何使用纹理坐标。一种常见的情况是效果“源”纹理和摄像机的<a href="SL-CameraDepthTexture.html">深度纹理</a>需要不同的垂直坐标，具体取决于抗锯齿设置。有关更多信息，请参阅 Unity 用户手册<a href="SL-PlatformDifferences.html">平台差异</a>页面。</p>
+
+<h3>相关主题</h3>
+
+<ul>
+<li><p><a href="SL-CameraDepthTexture.html">深度纹理</a>通常用于图像后期处理，以获得屏幕上每个像素距最近不透明表面的距离。</p></li>
+<li><p>对于 <a href="HDR.html">HDR</a> 渲染，<a href="../ScriptReference/ImageEffectTransformsToLDR.html">ImageEffectTransformsToLDR</a> 属性指示使用色调映射。</p></li>
+<li><p>还可以使用<a href="GraphicsCommandBuffers.html">命令缓冲区</a>来执行后期处理。</p></li>
+<li><p>使用 <a href="../ScriptReference/RenderTexture.GetTemporary.html">RenderTexture.GetTemporary</a> 来获取临时渲染纹理并在后期处理效果中进行计算。</p></li>
+<li><p>另请参阅 Unity 用户手册的<a href="SL-ShaderPrograms.html">编写着色器程序</a>页面。</p></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–24 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Monitors.html"></a></span><div class="tip">监视器</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HDR.html"></a></span><div class="tip">高动态范围渲染</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

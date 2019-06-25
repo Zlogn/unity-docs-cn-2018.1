@@ -1,0 +1,223 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Sprite Editor：Edit Outline - Unity Manual">
+<title>Sprite Editor：Edit Outline - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/SpriteEditor0.png">
+<meta name="description" content="使用 Sprite Editor 的 Edit Outline 选项可编辑精灵生成的网格，从而有效编辑其轮廓。">
+<meta property="og:description" content="使用 Sprite Editor 的 Edit Outline 选项可编辑精灵生成的网格，从而有效编辑其轮廓。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'SpriteOutlineEditor';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpriteOutlineEditor.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpriteOutlineEditor.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpriteOutlineEditor.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpriteOutlineEditor.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpriteOutlineEditor.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpriteOutlineEditor.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpriteOutlineEditor.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpriteOutlineEditor.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpriteOutlineEditor.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpriteOutlineEditor.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/SpriteOutlineEditor.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/SpriteOutlineEditor.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/SpriteOutlineEditor.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/SpriteOutlineEditor.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/SpriteOutlineEditor.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/SpriteOutlineEditor.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/SpriteOutlineEditor.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/SpriteOutlineEditor.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/SpriteOutlineEditor.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/SpriteOutlineEditor.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/SpriteOutlineEditor.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/SpriteOutlineEditor.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/SpriteOutlineEditor.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/SpriteOutlineEditor.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">精灵</a></li>
+<li><a href="SpriteEditor.html">Sprite Editor</a></li>
+<li>Sprite Editor：Edit Outline</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpriteEditor.html"></a></span><div class="tip">Sprite Editor</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CustomPhysicsShape.html"></a></span><div class="tip">Sprite Editor: Custom Physics Shape</div>
+</div>
+</div></div>
+<h1>Sprite Editor：Edit Outline</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>使用 <a href="SpriteEditor.html">Sprite Editor</a> 的 <strong>Edit Outline</strong> 选项可编辑<a href="Sprites.html">精灵</a>生成的<a href="class-Mesh.html">网格</a>，从而有效编辑其轮廓。</p>
+
+<p>精灵中的透明区域会对项目的性能产生负面影响。此功能对于微调精灵的边界非常有用，可确保形状中的透明区域减少。</p>
+
+<p>要访问此选项，请选择精灵，然后打开 <a href="SpriteEditor.html">Sprite Editor</a>（单击 Inspector 窗口中的 <strong>Sprite Editor__）。单击左上角的 </strong>Sprite Editor__ 下拉选单，然后选择 <strong>Edit Outline</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor0.png" alt="使用 Sprite Editor 的下拉选单访问 Edit Outline">
+<figcaption>使用 Sprite Editor 的下拉选单访问 <strong>Edit Outline</strong></figcaption>
+</figure>
+
+<p>选择 <strong>Edit Outline</strong> 后，单击某个精灵。Sprite Editor 将显示精灵的轮廓和控制点。轮廓用白线表示。控制点是可用于移动和操纵轮廓的区域。控制点用小方块表示。单击并拖动白色方块轮廓控制点即可更改其位置。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor1.png" alt="白色方块表示轮廓控制点 - 单击并拖动可更改其位置">
+<figcaption>白色方块表示轮廓控制点 - 单击并拖动可更改其位置</figcaption>
+</figure>
+
+<p>将鼠标悬停在白色方块轮廓控制点上时，轮廓上会出现蓝色方块。拖动此方块可重新定位控制点，蓝色方块将成为新的白色方块轮廓控制点，如下所示</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor2.png" alt="将鼠标悬停在白色方块控制点上，然后将蓝色方块拖动到新控制点所需的位置">
+<figcaption>将鼠标悬停在白色方块控制点上，然后将蓝色方块拖动到新控制点所需的位置</figcaption>
+</figure>
+
+<p>要创建新轮廓，请在精灵内的空白区域中拖动。这样就会创建带有四个控制点的新矩形轮廓。多次执行此过程即可在一个精灵上创建多个轮廓（例如，在轮廓内部有间隙的圆环精灵）。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor3.png" alt="通过在精灵内的空白区域中拖动来创建新的轮廓 - 可在一个精灵中使用多个轮廓">
+<figcaption>通过在精灵内的空白区域中拖动来创建新的轮廓 - 可在一个精灵中使用多个轮廓</figcaption>
+</figure>
+
+<p>要移动轮廓而不是控制点，请在单击并拖动轮廓时按住 <strong>Ctrl</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor4.png" alt="按住 Ctrl 可拖动线条（此处显示为黄色）而不是控制点。">
+<figcaption>按住 <strong>Ctrl</strong> 可拖动线条（此处显示为黄色）而不是控制点。</figcaption>
+</figure>
+
+<h2>Outline Tolerance</h2>
+
+<p>使用 <strong>Outline Tolerance</strong> 滑动条可增加和减少可用的轮廓控制点数，范围介于 <strong>0__（最小控制点数）和 </strong>1__（最大控制点数）之间。较高的 <strong>Outline Tolerance</strong> 值会创建更多的轮廓控制点，而较低的 <strong>Outline Tolerance</strong> 会创建更紧密的网格（即，在精灵和网格边缘之间具有较小透明像素边框的网格）。单击 <strong>Update</strong> 可应用所做的更改。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor5.png" alt="使用 Outline Tolerance 滑动条确定控制点的数量">
+<figcaption>使用 <strong>Outline Tolerance</strong> 滑动条确定控制点的数量</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/SpriteEditor6.png" alt="左边的精灵具有较低的 Outline Tolerance 值，而右边的精灵具有较高的 Outline Tolerance 值">
+<figcaption>左边的精灵具有较低的 <strong>Outline Tolerance</strong> 值，而右边的精灵具有较高的 <strong>Outline Tolerance</strong> 值</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SpriteEditor.html"></a></span><div class="tip">Sprite Editor</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="CustomPhysicsShape.html"></a></span><div class="tip">Sprite Editor: Custom Physics Shape</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

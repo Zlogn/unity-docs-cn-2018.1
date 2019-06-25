@@ -1,0 +1,360 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Quality Settings - Unity Manual">
+<title>Quality Settings - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/QualSettingsTop.png">
+<meta name="description" content="Unity 允许设置其尝试渲染的图形质量级别。一般来说，高质量是以帧率为代价的，因此最好不要在移动设备或旧硬件上以最高质量为目标，因为它会对游戏运行产生不利影响。Quality Settings Inspector（菜单：__Edit &gt; Project Settings &gt; Quality__）用于在所选设备的编辑器中选择质量级别。它分为两个主要区域 - 在顶部有以下矩阵：">
+<meta property="og:description" content="Unity 允许设置其尝试渲染的图形质量级别。一般来说，高质量是以帧率为代价的，因此最好不要在移动设备或旧硬件上以最高质量为目标，因为它会对游戏运行产生不利影响。Quality Settings Inspector（菜单：__Edit &gt; Project Settings &gt; Quality__）用于在所选设备的编辑器中选择质量级别。它分为两个主要区域 - 在顶部有以下矩阵：">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-QualitySettings';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-QualitySettings.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-QualitySettings.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-QualitySettings.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-QualitySettings.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-QualitySettings.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-QualitySettings.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-QualitySettings.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-QualitySettings.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-QualitySettings.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-QualitySettings.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-QualitySettings.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/class-QualitySettings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/class-QualitySettings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/class-QualitySettings.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-QualitySettings.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-QualitySettings.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-QualitySettings.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-QualitySettings.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-QualitySettings.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-QualitySettings.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-QualitySettings.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-QualitySettings.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-QualitySettings.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-QualitySettings.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Quality Settings</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics Settings</div>
+</div>
+</div></div>
+<h1>Quality Settings</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity 允许设置其尝试渲染的图形质量级别。一般来说，高质量是以帧率为代价的，因此最好不要在移动设备或旧硬件上以最高质量为目标，因为它会对游戏运行产生不利影响。<strong>Quality Settings</strong> Inspector（菜单：__Edit &gt; Project Settings &gt; Quality__）用于在所选设备的编辑器中选择质量级别。它分为两个主要区域 - 在顶部有以下矩阵：</p>
+
+<figure>
+<img src="../uploads/Main/QualSettingsTop.png" alt="">
+</figure>
+
+<p>Unity 允许为给定的质量选项组合指定名称，以便于参考。在矩阵的行中可以选择每个质量级别适用于哪些不同平台。矩阵底部的默认行本身不是质量级别，而是设置用于每个平台的默认质量级别（列中的绿色复选框表示当前为该平台选择的级别）。Unity 预先启用了六个质量级别，但您可以使用矩阵下方的按钮添加自己的级别。可以使用垃圾桶图标（最右侧的列）删除不需要的质量级别。</p>
+
+<p>可以单击质量级别的名称来选择该质量级别以便进行编辑，此操作可以在位于设置矩阵下面的面板中完成：</p>
+
+<figure>
+<img src="../uploads/Main/QualitySettingsBottom.png" alt="">
+</figure>
+
+<p>对于质量级别可选择的质量选项如下：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Name</strong></td>
+	<td style="text-align:left;">用于指代此质量级别的名称</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Rendering</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Pixel Light Count</strong></td>
+	<td style="text-align:left;">使用前向渲染时的最大像素光照数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Texture Quality</strong></td>
+	<td style="text-align:left;">选择是以最大分辨率还是以更小的分辨率显示纹理（较低的分辨率具有较低的处理开销）。选项包括 <strong>Full Res</strong>、<strong>Half Res</strong>、<strong>Quarter Res</strong> 和 <strong>Eighth Res</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Anisotropic Textures</strong></td>
+	<td style="text-align:left;">是否启用以及如何使用各向异性纹理。选项包括 <strong>Disabled</strong>、<strong>Per Texture</strong> 和 <strong>Forced On__（即始终启用）。 |
+|</strong>AntiAliasing<strong>|设置要使用的抗锯齿级别。选项包括 <strong>2x</strong>、<strong>4x</strong> 和 <strong>8x</strong> 多重采样。|
+|</strong>Soft Particles<strong>|是否应为粒子使用软混合？|
+|</strong>Realtime Reflection Probes<strong>|是否应在游戏过程中更新<a href="class-ReflectionProbe.html">反射探针</a>？|
+|</strong>Resolution Scaling Fixed DPI Factor__</td>
+	<td style="text-align:left;">Downscales the device’s screen resolution below its native resolution. For more details, see the platform-specific Player Settings pages, such as <a href="class-PlayerSettingsAndroid.html">Android Player Settings</a> and <a href="class-PlayerSettingsiOS.html">iOS Player Settings</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Shadows</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Shadows</strong></td>
+	<td style="text-align:left;">确定应使用的阴影类型。可用选项包括 <strong>Hard and Soft Shadows</strong>、<strong>Hard Shadows Only</strong> 和 <strong>Disable Shadows</strong>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow resolution</strong></td>
+	<td style="text-align:left;">可以按多种不同分辨率渲染阴影：<strong>Low</strong>、<strong>Medium</strong>、<strong>High</strong> 和 <strong>Very High</strong>。分辨率越高，处理开销越大。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Projection</strong></td>
+	<td style="text-align:left;">投射方向光的阴影时有两种不同方法。<strong>Close Fit</strong> 可以渲染出更高分辨率的阴影，但如果摄像机移动，它们有时会略微抖动。<strong>Stable Fit</strong> 渲染较低分辨率的阴影，但它们不会因摄像机移动而抖动。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Cascades</strong></td>
+	<td style="text-align:left;">阴影级联的数量可以设置为零个、两个或四个。级联数量越高，提供的质量越高，但代价是处理开销增大（有关更多详细信息，请参阅<a href="DirLightShadows.html">方向光阴影</a>）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Distance</strong></td>
+	<td style="text-align:left;">摄像机可以看到阴影的最大距离。超出此距离的阴影将不会被渲染。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadowmask Mode</strong></td>
+	<td style="text-align:left;">使用<a href="LightMode-Mixed-ShadowmaskMode.html">阴影遮罩</a>混合光照模式时设置阴影遮罩行为。应使用 Lighting 窗口（菜单：__Window__ &gt; <strong>Lighting</strong> &gt; <strong>Settings__）在场景中进行此设置。 |
+|     Distance Shadowmask | Unity 对于 </strong>Shadow Distance__ 范围内的值使用实时阴影，超过此距离则使用烘焙阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">    Shadowmask</td>
+	<td style="text-align:left;">投射阴影的静态游戏对象总是投射烘焙阴影。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Shadow Near Plane Offset</strong></td>
+	<td style="text-align:left;">对阴影近平面进行偏移处理来解决大三角形由于阴影平坠而扭曲的问题。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Other</h2>
+
+<p>|**<em>属性_：** |<strong><em>功能：</em></strong> |
+|:—|:—|
+|<strong>Blend Weights</strong>|在动画期间可以影响给定顶点的骨骼数量。可用选项包括一个、两个或四个骨骼。|
+|<strong>VSync Count</strong>|渲染可以与显示设备的刷新率同步来避免“撕裂”瑕疵（见下文）。可以选择与每个垂直空白 (VBlank) 同步、每隔一个垂直空白同步或根本不同步。|
+|<strong>LOD Bias</strong>|根据对象在屏幕上的大小选择 LOD 级别。当大小在两个 LOD 级别之间时，可以偏向于两个可用模型中细节级别更低或更高者。此属性设置为 0 到 +无穷大之间的值。设置为 0 到 1 之间时，表示倾向于更少细节。超过 1 的设置表示倾向于更多细节。例如，将 LOD Bias 设置为 2 并使其在 50％ 距离处变化，LOD 实际上仅基于 25％ 变化。 |
+|<strong>Maximum LOD Level</strong>|游戏使用的最高 LOD。有关更多信息，请参阅下面的注意事项。|
+|<strong>Particle Raycast Budget</strong>|用于模拟粒子系统碰撞的最大射线投射数（质量设置为 <strong>Medium</strong> 或 <strong>Low__）。请参阅<a href="class-ParticleSystem.html">粒子系统碰撞模块</a>。|
+|</strong>Async Upload Time Slice<strong>|将缓冲的纹理上传到 GPU 时花费的 CPU 时间量（以毫秒/帧为单位）。请参阅<a href="AsyncTextureUpload.html">异步纹理上传</a>。|
+|</strong>Async Upload Buffer Size</em>_|异步上传缓冲区的大小（以 MB 为单位）。请参阅<a href="AsyncTextureUpload.html">异步纹理上传</a>。|</p>
+
+<h2>MaximumLOD 级别</h2>
+
+<p>在构建中不会使用 LOD 低于 MaximumLOD 级别的模型，而是将其忽略（这样可以节省存储和内存空间）。Unity 将使用与目标平台质量设置相关联的所有 MaximumLOD 值中的最小 LOD 值。如果包含 LOD 级别，则该 LODGroup 中的模型将包含在构建中，并始终在运行时为该 LODGroup 加载，无论使用何种质量设置。例如，如果在任何质量设置中使用 LOD 级别 0，则所有 LOD 级别都将包含在构建中，并且所有引用的模型都将在运行时加载。</p>
+
+<h2>撕裂</h2>
+
+<p>显示设备上的图片不会持续更新，而是定期更新，很大程度上就像 Unity 中的帧更新一样。但是，Unity 的更新不一定与显示器的更新同步，因此 Unity 有可能在显示器仍在渲染前一帧时发出新的帧。这将导致在屏幕上发生帧变化的位置处产生称为“撕裂”的视觉瑕疵。</p>
+
+<figure>
+<img src="../uploads/Main/Tearing.png" alt="模拟撕裂的示例。在放大的部分有清晰可见的图像偏移。">
+<figcaption>模拟撕裂的示例。在放大的部分有清晰可见的图像偏移。</figcaption>
+</figure>
+
+<p>可以将 Unity 设置为仅在显示设备未更新的时间段（即所谓的“垂直空白”）切换帧。Quality Settings 上的 VSync 选项将帧开关与设备的垂直空白同步，还可以选择与每隔一个垂直空白同步。如果游戏需要多个设备更新来完成帧的渲染，后者可能会很有用。</p>
+
+<h3>抗锯齿</h3>
+
+<p>抗锯齿可改善多边形边缘的外观，使它们不会产生“锯齿现象”，而是在屏幕上获得平滑的显示效果。但是，它会导致显卡的性能成本升高并使用更多的视频内存（尽管没有 CPU 成本）。抗锯齿的程度决定了多边形边缘的平滑程度（以及消耗的视频内存量）。</p>
+
+<figure>
+<img src="../uploads/Main/AntiAliasingNone.png" alt="没有抗锯齿，多边形边缘是锯齿状的。">
+<figcaption>没有抗锯齿，多边形边缘是锯齿状的。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/AntiAliasing4x.png" alt="通过 4x 抗锯齿，可以平滑多边形边缘。">
+<figcaption>通过 4x 抗锯齿，可以平滑多边形边缘。</figcaption>
+</figure>
+
+<p>但是，内置的硬件抗锯齿不适用于<a href="RenderTech-DeferredShading.html">延迟着色</a>和 <a href="HDR.html">HDR</a> 渲染；对于这些情况，需要使用<a href="PostProcessing-Antialiasing.html">抗锯齿图像效果</a>。</p>
+
+<h3>软粒子</h3>
+
+<p>软粒子在与其他场景几何体的交叉处附近淡出。这种视觉效果将大幅提升，但计算成本更高（更复杂的像素着色器），并且仅适用于支持<a href="SL-DepthTextures.html">深度纹理</a>的平台。此外，必须使用<a href="RenderTech-DeferredShading.html">延迟着色</a>或<a href="RenderTech-DeferredLighting.html">旧版延迟光照</a>渲染路径，或使摄像机从脚本渲染<a href="SL-CameraDepthTexture.html">深度纹理</a>。</p>
+
+<figure>
+<img src="../uploads/Main/SoftParticlesOff.png" alt="没有软粒子 - 与场景的可见交叉。">
+<figcaption>没有软粒子 - 与场景的可见交叉。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/SoftParticlesOn.png" alt="使用软粒子 - 交叉位置平滑淡出。">
+<figcaption>使用软粒子 - 交叉位置平滑淡出。</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–09–18 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 <a href="https://docs.unity3d.com/2017.1/Documentation/Manual/30_search.html?q=newin20171">2017.1</a> 版中添加了 <strong>Shadowmask Mode</strong> <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-Physics2DManager.html"></a></span><div class="tip">Physics 2D Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-GraphicsSettings.html"></a></span><div class="tip">Graphics Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

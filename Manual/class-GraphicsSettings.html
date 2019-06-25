@@ -1,0 +1,441 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Graphics Settings - Unity Manual">
+<title>Graphics Settings - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/GraphicsSettings.png">
+<meta name="description" content="这是实验性设置，允许定义一系列命令来精确控制场景的渲染方式（而不是使用 Unity 提供的默认渲染管线）。有关此实验性功能的更多信息，请参阅 GitHub 上的&amp;#8220;可编程渲染管线&amp;#8221;(Scriptable Render Pipeline) 文档。">
+<meta property="og:description" content="这是实验性设置，允许定义一系列命令来精确控制场景的渲染方式（而不是使用 Unity 提供的默认渲染管线）。有关此实验性功能的更多信息，请参阅 GitHub 上的&amp;#8220;可编程渲染管线&amp;#8221;(Scriptable Render Pipeline) 文档。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-GraphicsSettings';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-GraphicsSettings.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-GraphicsSettings.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-GraphicsSettings.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-GraphicsSettings.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-GraphicsSettings.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-GraphicsSettings.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-GraphicsSettings.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-GraphicsSettings.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-GraphicsSettings.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-GraphicsSettings.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-GraphicsSettings.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/class-GraphicsSettings.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/class-GraphicsSettings.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/class-GraphicsSettings.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-GraphicsSettings.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-GraphicsSettings.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-GraphicsSettings.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-GraphicsSettings.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-GraphicsSettings.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-GraphicsSettings.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-GraphicsSettings.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-GraphicsSettings.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-GraphicsSettings.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-GraphicsSettings.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="EditorFeatures.html">编辑器功能</a></li>
+<li><a href="comp-ManagerGroup.html">Project Settings</a></li>
+<li>Graphics Settings</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-QualitySettings.html"></a></span><div class="tip">Quality Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkManager.html"></a></span><div class="tip">Network Manager</div>
+</div>
+</div></div>
+<h1>Graphics Settings</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<figure>
+<img src="../uploads/Main/GraphicsSettings.png" alt="">
+</figure>
+
+<h3>Scriptable RenderLoop settings</h3>
+
+<p>这是实验性设置，允许定义一系列命令来精确控制场景的渲染方式（而不是使用 Unity 提供的默认渲染管线）。有关此实验性功能的更多信息，请参阅 GitHub 上的“可编程渲染管线”(Scriptable Render Pipeline) 文档。</p>
+
+<h3>Camera settings</h3>
+
+<p>这些属性控制各种渲染设置。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Transparancy Sort Mode</strong></td>
+	<td style="text-align:left;">Unity 中的渲染器按几个条件排序，例如图层编号或与摄像机的距离。Transparency Sort Mode 添加了按可渲染对象沿特定轴的距离对可渲染对象进行排序的功能。这通常仅适用于 2D 开发；例如，按高度或沿 Y 轴来对精灵进行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Default</td>
+	<td style="text-align:left;">根据摄像机模式将对象进行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Perspective</td>
+	<td style="text-align:left;">根据透视图将对象进行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Orthographic</td>
+	<td style="text-align:left;">根据正交视图将对象进行排序。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Transparancy Sort Axis</strong></td>
+	<td style="text-align:left;">使用此项可以设置自定义透明度排序模式 (Transparency Sort Mode)。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Tier settings</h3>
+
+<figure>
+<img src="../uploads/Main/GraphicsSettings2.png" alt="PlayerSettings Inspector 窗口中显示的 Tier Settings">
+<figcaption>PlayerSettings Inspector 窗口中显示的 Tier Settings</figcaption>
+</figure>
+
+<p>使用这些设置，可以通过调整内置定义来对渲染和着色器编译进行特定于平台的调整。例如，可以使用此功能在高端 iOS 设备上启用级联阴影，但在低端设备上禁用级联阴影以便提高性能。层由 <a href="../ScriptReference/Rendering.GraphicsTier.html">Rendering.GraphicsTier</a> 定义。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Standard Shader Quality</strong></td>
+	<td style="text-align:left;">选择 Standard Shader Quality。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes Box Projection</strong></td>
+	<td style="text-align:left;">指定是否应使用 Reflection Probes Box Projection。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Reflection Probes Blending</strong></td>
+	<td style="text-align:left;">指定是否应启用 Reflection Probes Blending。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Detail Normal Map</strong></td>
+	<td style="text-align:left;">指定是否应对细节法线贴图 (Detail Normal Map) 采样（如果已分配）。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enable Semitransparent Shadows</strong></td>
+	<td style="text-align:left;">指定是否应启用 Semitransparent Shadows。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cascaded Shadows</strong></td>
+	<td style="text-align:left;">指定是否应使用级联阴影贴图。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use HDR</strong></td>
+	<td style="text-align:left;">将此字段设置为 true 可为此层启用 HDR 渲染。将此字段设置为 false 可为此层禁用 HDR 渲染。另请参阅：<a href="HDR.html">高动态范围渲染</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>HDR Mode</strong></td>
+	<td style="text-align:left;">要用于此层的摄像机 HDR 模式 (CameraHDRMode)。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Rendering Path</strong></td>
+	<td style="text-align:left;">应使用的渲染路径。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Built-in shader settings</h3>
+
+<p>使用这些设置可指定在列出的每个渲染路径中使用哪个着色器进行光照通道计算。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>着色器：</strong></th>
+	<th style="text-align:left;"><strong>计算：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Deferred</strong></td>
+	<td style="text-align:left;">使用延迟光照时使用，请参阅<a href="class-Camera.html">摄像机：渲染路径</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Deferred Reflection</strong></td>
+	<td style="text-align:left;">在延迟光照下使用延迟反射（即反射探针）时使用，请参阅<a href="class-Camera.html">摄像机：渲染路径</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Screen Space shadows</strong></td>
+	<td style="text-align:left;">使用屏幕空间阴影时使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Legacy deferred</strong></td>
+	<td style="text-align:left;">使用旧版延迟光照时使用，请参阅<a href="class-Camera.html">摄像机：渲染路径</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Motion vectors</strong></td>
+	<td style="text-align:left;">使用旧版延迟光照时使用，请参阅<a href="class-MeshRenderer.html">网格渲染器：运动矢量</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lens Flare</strong></td>
+	<td style="text-align:left;">使用镜头光晕 (Lens Flares) 时使用，请参阅<a href="class-Flare.html">光晕</a>。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Light Halo</strong></td>
+	<td style="text-align:left;">使用光环 (Light Halos) 时使用，请参阅<a href="class-Halo.html">光环</a>。</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>设置：</strong></th>
+	<th style="text-align:left;"><strong>描述：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Built-in shader__（默认值）| 使用 Unity 的内置着色器进行计算。 |
+|</strong>Custom shader<strong>| 使用自己的兼容着色器进行计算。这样可以对延迟渲染进行深度自定义。 |
+|</strong>No Support__</td>
+	<td style="text-align:left;">禁用此计算。如果不使用延迟着色或光照，请使用此设置。这样可以节省构建的游戏数据文件中的一些空间。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Always-included Shaders</h3>
+
+<p>指定将始终与项目一起存储（即使场景中没有任何对象实际使用这些着色器）的<a href="class-Shader.html">着色器</a>列表。应将流式 AssetBundle 使用的着色器添加到此列表中来确保可以访问这些着色器，这一点非常重要。</p>
+
+<h3>Shader stripping - Lightmap modes 和 Fog modes</h3>
+
+<p>通过剥离涉及光照和雾效的某些着色器，降低构建数据大小并缩短加载时间。</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>设置：</em></strong></th>
+	<th style="text-align:left;"><strong><em>描述：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Automatic__（默认值）| Unity 会查看场景和光照贴图设置来确定未使用的雾效和光照贴图模式，并跳过对应的着色器变体。 |
+|</strong>Manual__</td>
+	<td style="text-align:left;">指定自己使用的模式。如果要在运行时通过脚本来<a href="AssetBundles-Building.html">构建资源包</a>或更改雾模式，请选择此选项，确保包含了要使用的模式。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Shader stripping - Instancing variants</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>设置：</em></strong></th>
+	<th style="text-align:left;"><strong><em>描述：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">
+<strong>Strip Unused__（默认值）| 构建项目时，仅当至少有一个引用着色器的材质勾选了“Enable instancing”复选框，Unity 才会包含实例化着色器变体。Unity 会剥离勾选了“Enable instancing”的材质未引用的着色器。 |
+|</strong>Strip All<strong>| 剥离所有实例化着色器变体，即使它们正在被使用。|
+|</strong>Keep All__</td>
+	<td style="text-align:left;">保留所有实例化着色器变体，即使它们未被使用。</td>
+</tr>
+</tbody>
+</table>
+
+<p>有关实例化变体的更多信息，请参阅 <a href="GPUInstancing.html">GPU 实例化</a>。</p>
+
+<h3>Shader preloading</h3>
+
+<p>指定要在加载游戏时预加载的着色器变体集合资源的列表。此列表中指定的着色器变体会在应用程序的整个生命周期内加载。可使用此属性来预加载使用频率极高的着色器。有关详细信息，请参阅<a href="OptimizingShaderLoadTime.html">优化着色器加载时间</a>页面。</p>
+
+<h2>另请参阅</h2>
+
+<ul>
+<li><a href="OptimizingShaderLoadTime.html">优化着色器加载时间</a></li>
+<li><a href="OptimizingGraphicsPerformance.html">优化图形性能</a></li>
+<li><a href="SL-Shader.html">着色器参考</a></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">17–05–08 Page amended with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></li>
+<li>
+<span class="page-history">更新了 Tier Setting 的描述</span><br>
+</li>
+<li>
+<span class="page-history">5.6 版中添加了新功能</span><br>
+</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-QualitySettings.html"></a></span><div class="tip">Quality Settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-NetworkManager.html"></a></span><div class="tip">Network Manager</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

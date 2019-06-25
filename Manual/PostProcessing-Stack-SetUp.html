@@ -1,0 +1,224 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="设置post-processing stack(后期处理栈) - Unity Manual">
+<title>设置post-processing stack(后期处理栈) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PostProcessing-Stack-SetUp-0.png">
+<meta name="description" content="为了获得最佳的后期处理结果，建议在启用 HDR 的线性颜色空间中工作。此外，建议使用deferred rendering path(延迟渲染路径)（基于某些效果的需要，例如屏幕空间反射）。">
+<meta property="og:description" content="为了获得最佳的后期处理结果，建议在启用 HDR 的线性颜色空间中工作。此外，建议使用deferred rendering path(延迟渲染路径)（基于某些效果的需要，例如屏幕空间反射）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PostProcessing-Stack-SetUp';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessing-Stack-SetUp.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessing-Stack-SetUp.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessing-Stack-SetUp.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessing-Stack-SetUp.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessing-Stack-SetUp.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessing-Stack-SetUp.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessing-Stack-SetUp.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessing-Stack-SetUp.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessing-Stack-SetUp.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessing-Stack-SetUp.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/PostProcessing-Stack-SetUp.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/PostProcessing-Stack-SetUp.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/PostProcessing-Stack-SetUp.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/PostProcessing-Stack-SetUp.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessing-Stack-SetUp.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessing-Stack-SetUp.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessing-Stack-SetUp.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessing-Stack-SetUp.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessing-Stack-SetUp.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessing-Stack-SetUp.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessing-Stack-SetUp.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessing-Stack-SetUp.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessing-Stack-SetUp.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessing-Stack-SetUp.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="PostProcessingOverview.html">后期处理概述</a></li>
+<li><a href="PostProcessing-Stack.html">Post-processing stack（后期处理栈）</a></li>
+<li>设置post-processing stack(后期处理栈)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Stack.html"></a></span><div class="tip">Post-processing stack（后期处理栈）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-Antialiasing.html"></a></span><div class="tip">抗锯齿</div>
+</div>
+</div></div>
+<h2>设置post-processing stack(后期处理栈)</h2>
+
+<p>为了获得最佳的后期处理结果，建议在启用 HDR 的线性颜色空间中工作。此外，建议使用deferred rendering path(延迟渲染路径)（基于某些效果的需要，例如<a href="PostProcessing-ScreenSpaceReflection.html">屏幕空间反射</a>）。</p>
+
+<p>首先，需要将 Post Processing Behaviour 脚本添加到摄像机。可以通过选择摄像机并使用以下方法之一来实现此目的：</p>
+
+<ul>
+<li><p>将 <em>PostProcessingBehaviour.cs</em> 脚本从 Project 窗口拖到摄像机。</p></li>
+<li><p>使用菜单：__Component__ &gt; <strong>Effects</strong> &gt; <strong>Post Processing Behaviour</strong>。</p></li>
+<li><p>使用 Inspector 中的 <strong>Add Component</strong> 按钮。</p></li>
+</ul>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-Stack-SetUp-0.png" alt="添加 Post-Processing Behaviour 脚本">
+<figcaption>添加 Post-Processing Behaviour 脚本</figcaption>
+</figure>
+
+<p>现在有了一个配置了空配置文件的行为。下一步是使用以下方法之一创建自定义配置文件：</p>
+
+<ul>
+<li><p>在 Project 窗口中单击鼠标右键，然后选择 <strong>Create</strong> &gt; <strong>Post-Processing Profile</strong>。</p></li>
+<li><p>使用菜单：__Assets__ &gt; <strong>Create</strong> &gt; <strong>Post-Processing Profile</strong>。</p></li>
+</ul>
+
+<p>随后将在项目中创建一个新资源。</p>
+
+<p>后期处理配置文件是项目资源，可在场景/摄像机之间以及不同项目之间或 Asset Store 上轻松共享。这样就能更方便地创建预设（如用于桌面平台的高质量预设或用于移动平台的较低设置）。</p>
+
+<p>选中配置文件将显示 Inspector 窗口以便编辑配置文件设置。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-Stack-SetUp-1.png" alt="新创建的后期处理配置文件">
+<figcaption>新创建的后期处理配置文件</figcaption>
+</figure>
+
+<p>要将配置文件分配给行为，可将其从 Project 面板拖动到组件或使用 Inspector 中的对象选择器。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-Stack-SetUp-2.png" alt="已将后期处理配置文件分配给行为脚本">
+<figcaption>已将后期处理配置文件分配给行为脚本</figcaption>
+</figure>
+
+<p>选择配置文件后，可使用 Inspector 中每个效果的复选框来启用或禁用每个效果。可以在每一种效果的文档页面中找到各自的更多相关信息。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-Stack-SetUp-3.jpg" alt="启用泛光 (Bloom) 效果">
+<figcaption>启用泛光 (Bloom) 效果</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–24 Page published with limited <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Stack.html"></a></span><div class="tip">Post-processing stack（后期处理栈）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-Antialiasing.html"></a></span><div class="tip">抗锯齿</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

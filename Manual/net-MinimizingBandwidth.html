@@ -1,0 +1,192 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="最小化网络带宽（旧版） - Unity Manual">
+<title>最小化网络带宽（旧版） - Unity Manual</title>
+<meta name="description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta property="og:description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'net-MinimizingBandwidth';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MinimizingBandwidth.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MinimizingBandwidth.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MinimizingBandwidth.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MinimizingBandwidth.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MinimizingBandwidth.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MinimizingBandwidth.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MinimizingBandwidth.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MinimizingBandwidth.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MinimizingBandwidth.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MinimizingBandwidth.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/net-MinimizingBandwidth.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/net-MinimizingBandwidth.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/net-MinimizingBandwidth.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/net-MinimizingBandwidth.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MinimizingBandwidth.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MinimizingBandwidth.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MinimizingBandwidth.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MinimizingBandwidth.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MinimizingBandwidth.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MinimizingBandwidth.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MinimizingBandwidth.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MinimizingBandwidth.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MinimizingBandwidth.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MinimizingBandwidth.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li>最小化网络带宽（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-MasterServerBuild.html"></a></span><div class="tip">自行构建 Unity 网络服务器（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles4x.html"></a></span><div class="tip">旧版 Asset Bundle</div>
+</div>
+</div></div>
+<h1>最小化网络带宽（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>（对于新项目，应使用 <a href="UNet.html">5.1 版中引入的新网络系统</a>。此信息适用于使用旧网络系统的旧版项目。）</em></p>
+
+<p>由于与游戏的其他方面相比，网络通信可能很慢，因此将通信量降低到最低限度是非常重要的。所以，考虑交换的数据量和交换的频率还是非常重要的。</p>
+
+<h2>如何同步数据</h2>
+
+<p>使用的网络带宽量在很大程度上取决于使用__不可靠 (Unreliable)__ 还是__可靠增量压缩 (Reliable Delta Compression)__ 模式来同步数据（该模式是从网络视图 (Network View) 组件中设置的）。</p>
+
+<p>在__不可靠__模式下，所同步的整个对象将在网络更新循环的每次迭代中传输。此更新的频率由 <a href="../ScriptReference/Network-sendRate.html">Network.sendRate</a> 的值来决定，该值在默认情况下设置为每秒 15 次更新。__不可靠__模式确保了频繁更新，但任何丢弃或延迟的数据包都将被忽略。当对象非常频繁地改变状态并且错过更新带来的影响非常短暂时，此模式通常是可供使用的最佳同步模式。但是，您应该注意每次更新期间可能发送的数据量。例如，同步变换组件的过程涉及传输九个浮点值（三个 Vector3 各有三个浮点数），相当于每次更新 36 个字节。如果服务器运行八个客户端并使用默认更新频率，则它将接收 4,320 KBytes/s (8*36*15) 或 34.6Kbits/s 并传输 30.2 KBytes/s (8*7*36*15) 或 242Kbits/s。您可以通过降低更新频率来显著降低带宽消耗，但默认值 15 基本适合快速移动的游戏。</p>
+
+<p>在__可靠增量压缩__模式下，能够保证数据可靠发送并以正确顺序到达。如果数据包丢失，将重新传输，如果它们无序到达，将进入缓冲区，直到序列中的所有数据包都到达。虽然保证了正确接收传输的数据，但是等待和重传往往会增加带宽使用量。不过，数据也是增量压缩的，这意味着只传输最后状态和当前状态之间的差异。如果状态完全相同，则不发送任何内容。因此，增量压缩的好处取决于状态变化的程度和属性。</p>
+
+<h2>同步哪些数据</h2>
+
+<p>在设计游戏时有很多发挥创造性的机会，能够让所有客户端的状态_看起来_相同（即使可能并非严格相同）。这种情况的一个示例是动画同步。如果网络视图观察到动画组件，则该组件的属性将完全同步，因此动画帧将在所有客户端上以完全相同的方式显示。尽管在某些情况下这可能是合乎需要的，但通常只需将角色视为行走、奔跑、跳跃等。因此，可以简单地通过发送整数值来表示要播放哪个动画序列，从而粗略地同步动画。与同步整个动画组件相比，这将节省大量带宽。</p>
+
+<h2>何时同步数据</h2>
+
+<p>通常不必在所有客户端上保持游戏完全同步，例如在有些情况下，玩家暂时位于游戏世界的不同区域，他们不会彼此相遇。这样可以减少带宽以及服务器上的负载，因为只有可交互的客户端才需要保持同步。此概念有时称为__相关集__（即总游戏的一个子集在任何特定时间与任何特定客户端相关）。通过使用 RPC 可根据客户端相关集实现客户端同步，因为 RPC 可以更好地控制状态更新的目标。</p>
+
+<h3>关卡加载</h3>
+
+<p>加载关卡时，极少需要担心使用的带宽，因为每个客户端只需等所有其他客户端加载完关卡后才能玩。关卡加载过程通常涉及传输相当大的数据项（例如图像或音频数据）。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-MasterServerBuild.html"></a></span><div class="tip">自行构建 Unity 网络服务器（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetBundles4x.html"></a></span><div class="tip">旧版 Asset Bundle</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

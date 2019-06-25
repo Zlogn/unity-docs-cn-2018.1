@@ -1,0 +1,241 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="通用 Windows 平台播放器设置 (Universal Windows Platform Player Settings) - Unity Manual">
+<title>通用 Windows 平台播放器设置 (Universal Windows Platform Player Settings) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/WSA-PlayerSettings.png">
+<meta name="description" content="本页面将详细介绍通用 Windows 平台特有的__播放器设置 (Player Settings)__。有关常规播放器设置的描述，请参阅播放器设置相关文档。">
+<meta property="og:description" content="本页面将详细介绍通用 Windows 平台特有的__播放器设置 (Player Settings)__。有关常规播放器设置的描述，请参阅播放器设置相关文档。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-PlayerSettingsWSA';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsWSA.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsWSA.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsWSA.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsWSA.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsWSA.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsWSA.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsWSA.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsWSA.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsWSA.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsWSA.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-PlayerSettingsWSA.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/class-PlayerSettingsWSA.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/class-PlayerSettingsWSA.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/class-PlayerSettingsWSA.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-PlayerSettingsWSA.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-PlayerSettingsWSA.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-PlayerSettingsWSA.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-PlayerSettingsWSA.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-PlayerSettingsWSA.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-PlayerSettingsWSA.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-PlayerSettingsWSA.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-PlayerSettingsWSA.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-PlayerSettingsWSA.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-PlayerSettingsWSA.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="Windows.html">Windows</a></li>
+<li><a href="WindowsStore.html">通用 Windows 平台</a></li>
+<li>通用 Windows 平台播放器设置 (Universal Windows Platform Player Settings)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-scripts.html"></a></span><div class="tip">通用 Windows 平台：C# 脚本中的 WinRT API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-scriptingbackends.html"></a></span><div class="tip">脚本后端</div>
+</div>
+</div></div>
+<h1>通用 Windows 平台播放器设置 (Universal Windows Platform Player Settings)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>本页面将详细介绍通用 Windows 平台特有的__播放器设置 (Player Settings)__。有关常规播放器设置的描述，请参阅<a href="class-PlayerSettings.html">播放器设置</a>相关文档。</p>
+
+<figure>
+<img src="../uploads/Main/WSA-PlayerSettings.png" alt="">
+</figure>
+
+<p>首次创建 Visual Studio 解决方案时，大多数这些设置都会传输到 <em>Package.appxmanifest</em> 文件。</p>
+
+<p>注意：如果在现有项目之上构建项目，Unity 将不会覆盖 <em>Package.appxmanifest</em> 文件（如果已存在）。这意味着，如果在 Player Settings 中更改了某些内容，则应确保选中 <em>Package.appxmanifest</em>。如果要重新生成 _Package.appxmanifest_，请将其删除并从 Unity 重新构建项目。</p>
+
+<p>要了解更多信息，请参阅 Microsoft 的<a href="http://msdn.microsoft.com/en-us/library/windows/apps/br211474.aspx">应用程序包清单</a>文档。</p>
+
+<p>来自 Packaging、Application UI、Tile、Splash screen 和 Capabilities 的设置将直接传输到 <em>Package.appxmanifest</em> 文件中的设置。</p>
+
+<p>Player Settings 中<strong>支持的方向 (Supported orientations)</strong> 也会填充到清单（Visual Studio 解决方案中的 Package.appxmanifest 文件）。在通用 Windows 应用程序上，Unity 会将方向重置为您在 Player Settings 中使用的方向，无论在清单中指定了什么设置均是如此。这是因为 Windows 本身将忽略台式机和平板电脑上的这些设置。请注意，始终可使用 Unity Scripting API 来更改支持的方向。</p>
+
+<h2>Certificate</h2>
+
+<p>每个通用 Windows 应用程序都需要一个标识开发者的证书，如果您未提供自己的证书，Unity 将创建默认证书。</p>
+
+<h2>Compilation</h2>
+
+<p>如您所知，Unity 在编译脚本文件时使用 Mono，而您可以使用 .NET 3.5 中的 API。Compilation Overrides 允许在 C# 文件中使用适用于通用 Windows 平台的 .NET（也称为 .NET Core），此处提供了 API。</p>
+
+<h2>当 Compilation Overrides 设置为：</h2>
+
+<ul>
+<li>None - 使用 Mono 编译器编译 C# 文件。</li>
+<li>Use .Net Core - 使用 Microsoft 编译器和 .NET Core 编译 C# 文件，您可以使用 Windows 运行时 API，但无法通过 JS 语言访问在 C# 文件中实现的类。注意：使用来自 Windows 运行时的 API 时，建议使用 ENABLE_WINMD_SUPPORT 定义来包装代码，因为该 API 仅在构建到通用 Windows 平台时可用，在 Unity Editor 中不可用。</li>
+<li>Use .Net Core Partially - 使用 Microsoft 编译器和 .NET Core 编译不在 Plugins、Standard Assets、Pro Standard Assets 文件夹中的 C# 文件，而使用 Mono 编译器编译所有其他 C# 文件。优点是可通过 JS 语言访问 C# 中实现的类。
+注意：您将无法在 Unity Editor 中测试 .NET Core API，因为它无法访问 .NET Core，所以您只能在运行通用 Windows 应用程序时测试该 API。</li>
+</ul>
+
+<p><strong>注意：</strong>不能在 JS 脚本中使用 .NET Core API。</p>
+
+<p>以下是一个如何在脚本中使用 .NET Core API 的简单示例。</p>
+
+<pre><code>string GetTemporaryFolder()
+{
+# if ENABLE_WINMD_SUPPORT
+    return Windows.Storage.ApplicationData.Current.TemporaryFolder.Path;
+# else
+    return "LocalFolder";
+# endif
+}
+</code></pre>
+
+<h2>Misc</h2>
+
+<p>Unprocessed Plugins 包含 Unity 预处理工具（如 SerializationWeaver、AssemblyPreprocessor、rrw）忽略的插件列表。通常情况下，您不需要修改此列表，除非收到 Unity 未能预处理插件的错误。</p>
+
+<p>如果在此列表中添加一个插件，Unity 不会将额外的 IL 代码注入用于序列化的程序集，但是如果插件没有引用 UnityEngine.dll，那没问题，因为 Unity 不会序列化插件的任何数据。</p>
+
+<h2>Independent Input Source</h2>
+
+<p>此属性允许启用独立输入源的选项。基本上这会提高输入响应能力，通常都希望启用此选项。</p>
+
+<p>Low Latency Presentation API
+允许启用 Low Latency Presentation API，基本上此功能可创建带 DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT 标志的 D3D11 交换链，在此处读取更多内容，并应该能提高输入响应能力。默认情况下会禁用此选项，因为在具有较旧 GPU 驱动程序的硬件上，如果启用此选项，此选项会使游戏发生延迟；务必分析游戏的性能是否仍在可接受范围。</p>
+
+<h2>Capabilities</h2>
+
+<p>这些选项直接复制到 Package.appxmanifest。</p>
+
+<p><strong>注意：</strong>如果在先前的包之上构建游戏，不会覆盖 Package.appxmanifest。</p>
+
+<hr>
+
+<p><span class="page-edit">• 2017–05–16 Page amended with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span><br></p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="windowsstore-scripts.html"></a></span><div class="tip">通用 Windows 平台：C# 脚本中的 WinRT API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="windowsstore-scriptingbackends.html"></a></span><div class="tip">脚本后端</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

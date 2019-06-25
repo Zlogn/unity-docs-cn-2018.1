@@ -1,0 +1,258 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Inside the Android build process - Unity Manual">
+<title>Inside the Android build process - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/android-BuildProcess-0.png">
+<meta name="description" content="There are two Android build process output types in Unity: the output package (APK) and the exported project. An APK is automatically deployed to your device if you select Build and Run. Alternatively, you can use Android Debug Bridge (ADB) to deploy the APK manually after building. For the full list of ADB commands, refer to the Android Debug Bridge section of the Android Developer documentation.">
+<meta property="og:description" content="There are two Android build process output types in Unity: the output package (APK) and the exported project. An APK is automatically deployed to your device if you select Build and Run. Alternatively, you can use Android Debug Bridge (ADB) to deploy the APK manually after building. For the full list of ADB commands, refer to the Android Debug Bridge section of the Android Developer documentation.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'android-BuildProcess';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-BuildProcess.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-BuildProcess.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-BuildProcess.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-BuildProcess.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-BuildProcess.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-BuildProcess.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-BuildProcess.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-BuildProcess.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-BuildProcess.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-BuildProcess.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/android-BuildProcess.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/android-BuildProcess.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/android-BuildProcess.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/android-BuildProcess.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/android-BuildProcess.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/android-BuildProcess.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/android-BuildProcess.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/android-BuildProcess.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/android-BuildProcess.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/android-BuildProcess.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/android-BuildProcess.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/android-BuildProcess.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/android-BuildProcess.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/android-BuildProcess.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="PlatformSpecific.html">特定于平台的信息</a></li>
+<li><a href="android.html">Android</a></li>
+<li><a href="android-GettingStarted.html">Android 开发入门</a></li>
+<li>Inside the Android build process</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TroubleShootingAndroid.html"></a></span><div class="tip">Android 开发故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-bugreporting.html"></a></span><div class="tip">报告 Android 下的崩溃错误</div>
+</div>
+</div></div>
+<h1>Inside the Android build process</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>There are two Android build process output types in Unity: the output package (APK) and the exported project. An APK is automatically deployed to your device if you select <strong>Build and Run</strong>. Alternatively, you can use Android Debug Bridge (ADB) to deploy the APK manually after building. For the full list of ADB commands, refer to the <a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a> section of the Android Developer documentation. </p>
+
+<p>The output package includes APK expansion files (OBB) if the <strong>Split Application Binary</strong> option is selected in the Unity Editor’s <a href="class-PlayerSettings.html">Player Settings</a> window. For more details on OBB files, refer to the <a href="android-OBBsupport.html">OBB Support</a> section of the Unity Manual</p>
+
+<p>Unity supports two Android build systems: <strong>Gradle </strong>and <strong>Internal. </strong>Unity exports projects in two formats: <strong>ADT </strong>(Google Android project) and <strong>Gradle</strong>.</p>
+
+<h2>Internal build system</h2>
+
+<figure>
+<img src="../uploads/Main/android-BuildProcess-0.png" alt="">
+</figure>
+
+<p>The <strong>Internal </strong>build system creates an APK by invoking Android SDK utilities in a specific order. Unity automatically performs a number of steps to create the APK, including:</p>
+
+<ul>
+<li><p>Preparing and building the Unity Assets</p></li>
+<li><p>Compiling scripts</p></li>
+<li><p>Processing the plug-ins</p></li>
+<li><p>Splitting the resources into the parts that go to the APK and the OBB, if <strong>Split Application Binary</strong> is selected</p></li>
+<li><p>Building the Android resources using the AAPT utility</p></li>
+<li><p>Generating the Android manifest and merging the library manifests into it</p></li>
+<li><p>Compiling the Java code into the Dalvik Executable format (DEX)</p></li>
+<li><p>Building the <a href="IL2CPP.html">IL2CPP</a> library, if <strong>IL2CPP Scripting Backend</strong> is selected</p></li>
+<li><p>Building and optimizing the APK and OBB packages</p></li>
+</ul>
+
+<p>For more information about OBB files, see Unity documentation on <a href="android-OBBsupport.html">OBB Support</a>. For more information about the Android Manifest, see Unity <a href="android-manifest.html">Android Manifest</a> documentation.</p>
+
+<h2>Gradle build system</h2>
+
+<figure>
+<img src="../uploads/Main/android-BuildProcess-1.png" alt="">
+</figure>
+
+<p>The Gradle build system uses Gradle to build an APK or export a project in Gradle format, which can then be imported to Android Studio. For more details, see Unity documentation on <a href="android-gradle-overview.html">Gradle for Android</a>.</p>
+
+<p>When you select this build system, Unity goes through the same steps as the Internal build system excluding resource compilation with AAPT and running DEX. Unity then generates the <em>build.gradle</em> file (along with the other required configuration files) and invokes the Gradle executable, passing it the task name and the working directory. The APK is then built by Gradle.</p>
+
+<h2>Exporting the project</h2>
+
+<figure>
+<img src="../uploads/Main/android-BuildProcess-2.png" alt="">
+</figure>
+
+<p>For more control over the build pipeline, or to make changes that Unity does not normally allow (for example, fine tuning the manifest files that are automatically generated by Unity), you must export your project for use with external tools.</p>
+
+<p>Unity supports exporting projects in two formats: </p>
+
+<ul>
+<li><p><strong>Gradle project</strong> - Gradle projects are the recommended export format when exporting into Android Studio.</p></li>
+<li><p><strong>Google Android project (also known as ADT or Eclipse projects)</strong> - ADT projects can be imported into Eclipse or Android Studio (importing into Android converts the project to Gradle). This format is outdated and is no longer supported by Google.</p></li>
+</ul>
+
+<p>To export the project:</p>
+
+<ol>
+<li><p>Select <strong>Gradle</strong> or <strong>ADT </strong>in the <strong>Build Settings</strong> window (and check the <strong>Export Project</strong> checkbox if you have selected Gradle).</p></li>
+<li><p>Click <strong>Export </strong>and select the destination folder.</p></li>
+</ol>
+
+<p>When the export has finished, open Android Studio and import your project. For more information on importing projects to Android Studio, refer to the <a href="https://developer.android.com/studio/intro/migrate.html">Migrate to Android Studio</a> section of the Android Developer documentation.</p>
+
+<h2>纹理压缩</h2>
+
+<p>In the <strong>Build Settings</strong> window, there is a <strong>Texture Compression</strong> option. By default, Unity uses the ETC texture format for textures that don’t have individual texture format overrides (see Unity documentaton on <a href="class-TextureImporter.html">Textures</a> for more information).</p>
+
+<p>When building an APK to target specific hardware architecture, use the <strong>Texture Compression</strong> option to override this default behavior. Any texture that is not set to be compressed is left alone - only textures using a compressed texture format use the format selected in the <strong>Texture Compression</strong> option.</p>
+
+<p>To make sure the app is only deployed on devices which support the selected texture compression, Unity edits the <a href="http://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html">Android Manifest</a> to include tags that match the particular format selected. This ensures that the Google Play Store filtering mechanism will only serve the app to devices with appropriate graphics hardware. </p>
+
+<h2>Build or Build and Run</h2>
+
+<p>The <strong>Build Settings</strong> window offers two options: <strong>Build</strong> and <strong>Build and Run</strong>. When building, the output packages (APK and OBB, if enabled) are saved to the path that you select. You can publish these packages to the Google Play Store, or install them on your device manually with the help of ADB . For further information about installing apps manually, refer to the <a href="https://developer.android.com/training/basics/firstapp/running-app.html">Running Your App</a> section of the Android Developer documentation. </p>
+
+<p>Selecting <strong>Build and Run</strong> saves the output packages to the file path you specify, while also installing your app on the Android device connected to your computer. </p>
+
+<p>If the <strong>Split Application Binary </strong>option is enabled, the OBB file is pushed to the correct location on your device. If <strong>Development Build</strong> is checked, Unity also sets up a profiler tunnel and enables CheckJNI. After that, the app is launched.</p>
+
+<p><strong>Tip:</strong> Once you specify the output path for the packages, use the <strong>Ctrl+B</strong> (Windows) or <strong>Cmd+B</strong> (OSX) keyboard shortcut to <strong>Build and Run</strong> using the saved output path.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–05–25 Page published with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.5 版中的更新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="TroubleShootingAndroid.html"></a></span><div class="tip">Android 开发故障排除</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="android-bugreporting.html"></a></span><div class="tip">报告 Android 下的崩溃错误</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

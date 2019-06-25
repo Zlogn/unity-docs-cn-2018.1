@@ -1,0 +1,378 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="网络视图 (Network View) - Unity Manual">
+<title>网络视图 (Network View) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/Inspector-NetworkView.png">
+<meta name="description" content="（此类属于旧网络系统，已弃用。请参阅 NetworkIdentity 以了解新网络系统）。">
+<meta property="og:description" content="（此类属于旧网络系统，已弃用。请参阅 NetworkIdentity 以了解新网络系统）。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-NetworkView';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-NetworkView.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-NetworkView.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-NetworkView.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-NetworkView.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-NetworkView.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-NetworkView.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-NetworkView.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-NetworkView.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-NetworkView.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-NetworkView.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-NetworkView.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/class-NetworkView.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/class-NetworkView.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/class-NetworkView.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-NetworkView.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-NetworkView.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-NetworkView.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-NetworkView.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-NetworkView.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-NetworkView.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-NetworkView.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-NetworkView.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-NetworkView.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-NetworkView.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li><a href="net-NetworkView.html">网络视图（旧版）</a></li>
+<li>网络视图 (Network View)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-NetworkView.html"></a></span><div class="tip">网络视图（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-RPCDetails.html"></a></span><div class="tip">RPC 详细信息（旧版）</div>
+</div>
+</div></div>
+<h1>网络视图 (Network View)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>（此类属于旧网络系统，已弃用。请参阅 <a href="../ScriptReference/Networking.NetworkIdentity.html">NetworkIdentity</a> 以了解新网络系统）。</p>
+
+<p>__网络视图__是在 Unity 中创建联网多人游戏的门户。它们易于使用，但功能非常强大。因此，在开始尝试使用网络视图之前，建议您了解网络背后的基本概念。您可以在<a href="NetworkReferenceGuide.html">网络参考指南</a>中学习和探索这些基本概念。</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-NetworkView.png" alt="">
+</figure>
+
+<p>为了使用任何网络功能，包括__状态同步 (State Synchronization)__ 或__远程过程调用 (Remote Procedure Calls)__，您的__游戏对象__必须连接网络视图。</p>
+
+<h2>属性</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>State Synchronization</strong></td>
+	<td style="text-align:left;">此网络视图使用的<a href="net-StateSynchronization.html">状态同步 (State Synchronization)</a> 类型</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Off</strong>
+</td>
+	<td style="text-align:left;">不使用状态同步 (State Synchronization)。如果您只想发送 <a href="net-RPCDetails.html">RPC</a>，那么这是最佳选项</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Reliable Delta Compressed</strong>
+</td>
+	<td style="text-align:left;">仅发送上次状态和当前状态之间的差异，如果没有任何改变，则不发送任何内容。此模式是有序的。在丢包的情况下，自动重新发送丢失的数据包</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Unreliable</strong>
+</td>
+	<td style="text-align:left;">发送完整状态。这种情况会占用更多带宽，但最大限度降低了丢包的影响</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Observed</strong></td>
+	<td style="text-align:left;">通过网络发送的__组件__数据</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>View ID</strong></td>
+	<td style="text-align:left;">此网络视图的唯一标识符。这些值在检视面板中为只读值</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Scene ID</strong>
+</td>
+	<td style="text-align:left;">网络视图在此特定场景中的数字 ID</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;<strong>Type</strong>
+</td>
+	<td style="text-align:left;">在运行时保存到 <strong>Scene</strong> 或 <strong>Allocated</strong>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>详细信息</h2>
+
+<p>将网络视图添加到游戏对象时，必须决定两件事</p>
+
+<p>1.您希望网络视图发送哪种数据
+1.您希望如何发送该数据</p>
+
+<h3>选择要发送的数据</h3>
+
+<p>网络视图的 <strong>Observed</strong> 属性可包含单个组件。此组件可以是 <strong>Transform</strong>、<strong>Animation</strong>、<strong>RigidBody</strong> 或脚本。无论 <strong>Observed</strong> 组件是什么，都会通过网络发送其相关数据。您可以从下拉菜单中选择组件，也可以将任何组件标题直接拖到变量中。如果您不想直接发送数据，只想使用 RPC 调用，则可关闭同步（不直接发送数据），并且不需要为 Observed 属性设置值。RPC 调用只需要一个网络视图，因此如果已存在一个视图，则无需专门为 RPC 添加视图。</p>
+
+<h3>如何发送数据</h3>
+
+<p>您可以通过 2 个选项发送 <strong>Observed</strong> 组件的数据：__State Synchronization__ 和 <strong>Remote Procedure Calls</strong>。</p>
+
+<p>要使用 State Synchronization，请将网络视图的 <strong>State Synchronization</strong> 设置为 <strong>Reliable Delta Compressed</strong> 或 <strong>Unreliable</strong>。现在将通过网络自动发送 <strong>Observed</strong> 组件的数据。</p>
+
+<p><strong>Reliable Delta Compressed</strong> 是有序的。始终按照数据包的发送顺序接收数据包。如果数据包被丢弃，将重新发送该数据包。所有后续数据包都将排队等待，直到收到较早的数据包。仅发送上次传输值与当前值之间的差异，如果没有差异，则不发送任何内容。</p>
+
+<p>如果正在监视脚本，必须在脚本中显式序列化数据。应在 <strong>OnSerializeNetworkView()</strong> 函数中执行此操作。</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Network;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info) {
+        float horizontalInput = Input.GetAxis ("Horizontal");
+        stream.Serialize (horizontalInput);
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>function OnSerializeNetworkView (stream : BitStream, info : NetworkMessageInfo) {
+    var horizontalInput : float = Input.GetAxis ("Horizontal");
+    stream.Serialize (horizontalInput);
+}
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p>上面的函数始终在接收更新时写入（来自串流的更新）到 horizontalInput，否则在写入串流时从变量中读取。如果要在接收更新时或发送时执行不同的操作，可使用 BitStream 类的 <strong>isWriting</strong> 属性。</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Network;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info) {
+        float horizontalInput = 0.0;
+        if (stream.isWriting) {
+            // 发送
+            horizontalInput = Input.GetAxis ("Horizontal");
+            stream.Serialize (horizontalInput);
+        } else {    
+            // 接收
+            stream.Serialize (horizontalInput);
+            // ...用收到的变量执行一些有意义的操作
+        }
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>function OnSerializeNetworkView (stream : BitStream, info : NetworkMessageInfo) {
+    var horizontalInput : float = 0.0;
+    if (stream.isWriting) {
+        // 发送
+        horizontalInput = Input.GetAxis ("Horizontal");
+        stream.Serialize (horizontalInput);
+    } else {
+        // 接收
+        stream.Serialize (horizontalInput);
+        // ...用收到的变量执行一些有意义的操作
+    }
+}
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p><strong>OnSerializeNetworkView</strong> 的调用是根据 Network Manager 项目设置中指定的 <strong>sendRate</strong> 进行的。默认为 15 次/秒。</p>
+
+<p>如果要在脚本中使用远程过程调用，则只需要有一个 NetworkView 组件存在于脚本所连接到的同一游戏对象中。NetworkView 可用于其他目的，如果仅用于发送 RPC，它可以不监视脚本（Observed 属性不用设值）并可关闭状态同步。要从网络调用的函数必须具有 <strong>@RPC</strong> 属性。现在，从连接到同一游戏对象的任何脚本调用 <a href="../ScriptReference/NetworkView.RPC.html">networkView.RPC()</a> 来执行远程过程调用。</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Network;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    GameObject playerBullet;
+    NetworkView networkView;
+
+    void Start () {
+        networkView = new NetworkView ();
+    }
+
+    void Update () {
+        if (Input.GetButtonDown ("Fire1")) {
+            networkView.RPC ("PlayerFire", RPCMode.All);
+        }
+    }
+    
+    [RPC]
+    void PlayerFire () {
+        Instantiate (playerBullet, playerBullet.transform.position, playerBullet.transform.rotation);
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>var playerBullet : GameObject;
+
+function Update () {
+    if (Input.GetButtonDown ("Fire1")) {
+        networkView.RPC ("PlayerFire", RPCMode.All);
+    }
+}
+
+@RPC
+function PlayerFire () {
+    Instantiate (playerBullet, playerBullet.transform.position, playerBullet.transform.rotation);
+}
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p>RPC 将可靠且有序地传送。有关 RPC 的更多信息，请参阅 <a href="net-RPCDetails.html">RPC 详细信息</a>页面。</p>
+
+<h2>提示</h2>
+
+<ul>
+<li>如果仍然不清楚如何使用网络视图，请通读<a href="NetworkReferenceGuide.html">网络参考指南</a>
+</li>
+<li>无需禁用状态同步即可使用远程过程调用</li>
+<li>如果有多个网络视图，并希望对某个特定网络视图调用 RPC，请使用 <strong>GetComponents(NetworkView)[i].RPC()</strong>。</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-NetworkView.html"></a></span><div class="tip">网络视图（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-RPCDetails.html"></a></span><div class="tip">RPC 详细信息（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

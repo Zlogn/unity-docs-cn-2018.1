@@ -1,0 +1,220 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="状态同步细节（旧版） - Unity Manual">
+<title>状态同步细节（旧版） - Unity Manual</title>
+<meta name="description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta property="og:description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'net-StateSynchronization';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-StateSynchronization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-StateSynchronization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-StateSynchronization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-StateSynchronization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-StateSynchronization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-StateSynchronization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-StateSynchronization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-StateSynchronization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-StateSynchronization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-StateSynchronization.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/net-StateSynchronization.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/net-StateSynchronization.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/net-StateSynchronization.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/net-StateSynchronization.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-StateSynchronization.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-StateSynchronization.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-StateSynchronization.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-StateSynchronization.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-StateSynchronization.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-StateSynchronization.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-StateSynchronization.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-StateSynchronization.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-StateSynchronization.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-StateSynchronization.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li>状态同步细节（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-RPCDetails.html"></a></span><div class="tip">RPC 详细信息（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-NetworkInstantiate.html"></a></span><div class="tip">网络实例化（旧版）</div>
+</div>
+</div></div>
+<h1>状态同步细节（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>（对于新项目，应使用 <a href="UNet.html">5.1 版中引入的新网络系统</a>。此信息适用于使用旧网络系统的旧版项目。）</em></p>
+
+<p>通过从 <strong>State Synchronization</strong> 下拉选单中选择 <strong>Reliable Delta Compressed</strong> 或 _<em>Unreliable__，可启用给定网络视图 (Network View) 的状态同步 (State Synchronization)。随后必须使用 </em>Observed_ 属性选择要同步的数据类型。</p>
+
+<p>Unity 可以同步变换 (Transform)、动画 (Animation)、刚体 (Rigidbody) 和 MonoBehaviour 组件。</p>
+
+<p><a href="class-Transform.html">变换</a>是通过存储位置、旋转和比例来实现序列化的。不会通过网络传输父子化 (Parenting) 信息。</p>
+
+<p><a href="class-Animation.html">动画</a>可序列化每个正在运行的动画状态，即时间 (time)、权重 (weight)、速度 (speed) 和启用 (enabled) 属性。</p>
+
+<p><a href="class-Rigidbody.html">刚体</a>可序列化位置、旋转、速度和角速度。</p>
+
+<p>脚本 (MonoBehaviour) 将调用函数 <a href="../ScriptReference/Network.OnSerializeNetworkView.html">OnSerializeNetworkView()</a>。</p>
+
+<h2>可靠性和带宽</h2>
+
+<p>网络视图目前支持两个可靠性级别：可靠增量压缩 (Reliable Delta Compressed) 和不可靠 (Unreliable)。</p>
+
+<p>两者都有其优缺点，游戏的具体细节将决定最适合使用哪种级别。</p>
+
+<p>有关最小化带宽的其他信息，请阅读<a href="net-MinimizingBandwidth.html">最小化带宽页面</a>。</p>
+
+<h3>可靠增量压缩</h3>
+
+<p>__可靠增量压缩__模式会自动将客户端上次接收的数据与当前状态进行比较。如果自上次更新后没有数据发生更改，则不会发送任何数据。但是，数据将按每个属性进行比较。例如，如果变换组件的位置已更改但其旋转尚未更改，则只有位置才会通过网络发送。通过仅传输更改的数据可以节省带宽。</p>
+
+<p>Unity 还将确保每个 UDP 数据包均可靠到达，其做法是重新发送数据包，直至确定收到。这意味着，如果发生丢包，则在重新发送并收到丢弃的数据包之前，不会应用稍后发送的任何数据包。在此之前，所有后续数据包都将在缓冲区中等待。</p>
+
+<h3>不可靠</h3>
+
+<p>在 <strong>Unreliable</strong> 模式下，Unity 将发送数据包，但不检查是否收到数据包。这意味着它不知道已接收哪些信息，因此仅发送已更改的数据是不安全的 - 每次更新都要发送完整状态。</p>
+
+<h2>决定要使用哪种方法</h2>
+
+<p>网络层使用 UDP，这是一种不可靠的无序协议，但使用这种协议可以可靠发送有序数据包，就像 TCP 一样。为此，Unity 在内部使用 ACK 和 NACK 来控制数据包传输，确保不丢包。使用可靠的有序数据包的缺点是，如果某个数据包被丢弃或延迟，一切都会停止，直到该数据包安全到达为止。在存在显著网络延迟的情况下，这可能导致传输延迟。</p>
+
+<p>当您知道无论如何每一帧数据都会改变时，不可靠的传输非常有用。例如，在赛车游戏中，您几乎可以确定玩家的汽车始终在移动，因此错过的数据包的影响将很快被下一个数据包修复。</p>
+
+<p>一般而言，如果快速频繁的更新比丢失数据包更重要，应使用不可靠发送。相反，当数据不经常变化时，可使用可靠增量压缩来节省带宽。</p>
+
+<h2>预测</h2>
+
+<p>当服务器对世界状态具有<a href="net-HighLevelOverview.html">完全权限</a>时，客户端仅根据从服务器接收的更新来更改游戏状态。这种机制的一个问题是因等待服务器响应而引起的延迟会影响游戏运行。例如，当玩家按下按键以向前移动时，从服务器接收到更新状态之前，玩家实际上不会移动。这种延迟取决于连接的延迟，因此连接质量越差，控制系统变得越不灵活。</p>
+
+<p>一种可能的解决方案是__客户端预测__，即客户端通过使用大致相同的内部模型来预测来自服务器的预期动作更新。因此，玩家可立即响应以输入信息，但服务器将从上次更新中看到玩家位置。当状态更新最终从服务器到达时，客户端将比较预测的情况与实际发生的情况。二者可能会有所不同，因为服务器可能更了解玩家周围的环境，而客户端只知道所需知道的信息。预测错误将在发生时得到纠正，如果这些错误持续得到纠正，那么结果将更加平滑，也不容易注意到。</p>
+
+<h2>推算定位或插值/外推</h2>
+
+<p>可以将客户端预测的基本原理应用于玩家的对手。__外推__是存储对手最后几个已知位置、速度和方向值的过程，使用这些值可以预测对手在不久的将来应该会在什么位置。当下一个状态更新最终以正确的位置到达时，将使用确切的信息更新客户端状态，如果预测错误，可能会使角色突然跳跃。在 FPS 游戏中，玩家的行为可能非常不稳定，因此这种预测的成功几率有限。随着预测错误逐渐累积，如果滞后变得足够严重，对手将剧烈跳跃。</p>
+
+<p>如果数据包在前往客户端的途中丢失，可使用__插值__。这种情况下通常会导致 NPC 的移动暂停，然后在新数据包最终到达时跳到最新位置。通过将世界状态延迟一定的时间量（例如 100 毫秒），然后在最后的已知位置和新位置之间进行插值，这两个位点之间的移动（二者间发生了丢包）将是平滑的。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-RPCDetails.html"></a></span><div class="tip">RPC 详细信息（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-NetworkInstantiate.html"></a></span><div class="tip">网络实例化（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

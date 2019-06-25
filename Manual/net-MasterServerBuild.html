@@ -1,0 +1,203 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="自行构建 Unity 网络服务器（旧版） - Unity Manual">
+<title>自行构建 Unity 网络服务器（旧版） - Unity Manual</title>
+<meta name="description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta property="og:description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'net-MasterServerBuild';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MasterServerBuild.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MasterServerBuild.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MasterServerBuild.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MasterServerBuild.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MasterServerBuild.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MasterServerBuild.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MasterServerBuild.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MasterServerBuild.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MasterServerBuild.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MasterServerBuild.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/net-MasterServerBuild.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/net-MasterServerBuild.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/net-MasterServerBuild.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/net-MasterServerBuild.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MasterServerBuild.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MasterServerBuild.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MasterServerBuild.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MasterServerBuild.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MasterServerBuild.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MasterServerBuild.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MasterServerBuild.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MasterServerBuild.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MasterServerBuild.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MasterServerBuild.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li><a href="net-MasterServer.html">主服务器（旧版）</a></li>
+<li>自行构建 Unity 网络服务器（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-MasterServer.html"></a></span><div class="tip">主服务器（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-MinimizingBandwidth.html"></a></span><div class="tip">最小化网络带宽（旧版）</div>
+</div>
+</div></div>
+<h1>自行构建 Unity 网络服务器（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>（对于新项目，应使用 <a href="UNet.html">5.1 版中引入的新网络系统</a>。此信息适用于使用旧网络系统的旧版项目。）</em></p>
+
+<p>可以从 <a href="http://www.unity3d.com/master-server/">Unity 网站</a>下载所有各个网络服务器的源代码。这些服务器包括连接测试服务器、协调程序服务器、主服务器和代理服务器。</p>
+
+<p>所有源代码包都包括 RakNet 3.732 网络库，该库用于处理基本的网络功能并提供网络服务器使用的插件。</p>
+
+<p>这些代码包中包括可直接进行编译的三种不同类型的项目文件：</p>
+
+<ul>
+<li>适用于 Mac OS X 的 Xcode 3.0 项目</li>
+<li>适用于 Linux 和 Mac OS X 的 Makefile</li>
+<li>Visual Studio 2008 解决方案</li>
+</ul>
+
+<p>Xcode 和 Visual Studio 项目只需打开、编译和构建即可。要使用 Makefile 进行构建，只需运行“make”。此时应该可以使用 Linux 和 Mac OS X 上的标准编译设置，如果具有 _gcc_，应该能正常工作。在 Linux 上，可能需要安装 ncurses 库。</p>
+
+<h2>结构</h2>
+
+<h3>主服务器</h3>
+
+<p>主服务器使用内部_数据库_结构来跟踪主机信息。</p>
+
+<p>主机会发送具有 RUM_UPDATE_OR_ADD_ROW 消息标识符并嵌入了所有主机信息的消息。此过程是在 LightweightDatabaseServer.cpp 文件中的 <em>OnReceive()</em> 函数内处理的。此函数是所有消息最初出现的位置，因此如果要跟踪消息的处理方式，这是一个很好的起点。对于使用 <a href="../ScriptReference/MasterServer.RegisterHost.html">MasterServer.RegisterHost</a> 函数设置的每种_游戏类型_，将在数据库结构中创建一个表。所有游戏类型都将分组在一个表中，如果该表不存在，则会在 <em>CreateDefaultTable()</em> 函数中动态创建该表。</p>
+
+<p>主机信息数据将由主服务器进行修改。正在注册的游戏的 IP 和端口（如主服务器所见）将注入到主机数据中。因此，在主机使用私有地址（NAT 地址）的情况下，我们可以确定检测到正确的外部 IP 和端口。游戏服务器发送的主机数据中的 IP 和端口是私有地址和端口，这些信息将存储起来供以后使用。如果主服务器检测到客户端正在请求某个游戏服务器的主机数据，并且该服务器具有_相同_的 IP 地址，则会使用服务器的私有地址而不是外部地址。这是为了应对客户端和服务器位于同一本地网络上的情况（使用具有 NAT 地址的相同路由器）。因此，它们将具有相同的外部地址，不能通过该路由器相互连接，它们需要使用私有地址，在这种情况下将正常工作。</p>
+
+<p>客户端将发送包含 ID_DATABASE_QUERY_REQUEST 消息标识符以及客户端要查找的游戏类型的消息。此情况下将从数据库结构获取表或主机列表并将其发送到客户端。如果找不到主机列表，将发送空列表。</p>
+
+<p>发送给主服务器的所有消息都必须包含 <em>CheckVersion()</em> 函数中检查的版本信息。目前，Unity 的每个版本都将在内部设置一个新的主服务器版本，并在此处进行检查。因此，如果主服务器通信例程将在任何时候发生变化，它将能够在此处检测旧版本并可能引用主服务器的另一个版本（如果需要）或修改该消息的处理以解决差异问题。</p>
+
+<h3>协调程序</h3>
+
+<p>协调程序直接使用 RakNet 的 NAT 穿透插件，无需进行修改。协调程序本质上只是一个在加载了 NAT 穿透插件的端口上进行监听的对等端。当具有 NAT 地址的服务器和客户端都连接到此对等端时，它们将能够执行 NAT 穿透以相互连接。<a href="../ScriptReference/Network.InitializeServer.html">Network.InitializeServer</a> 使用 NAT 时，将自动为您设置连接。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-MasterServer.html"></a></span><div class="tip">主服务器（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-MinimizingBandwidth.html"></a></span><div class="tip">最小化网络带宽（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

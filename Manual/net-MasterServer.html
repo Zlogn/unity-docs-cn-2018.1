@@ -1,0 +1,385 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="主服务器（旧版） - Unity Manual">
+<title>主服务器（旧版） - Unity Manual</title>
+<meta name="description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta property="og:description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'net-MasterServer';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MasterServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MasterServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MasterServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MasterServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MasterServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MasterServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MasterServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MasterServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MasterServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MasterServer.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/net-MasterServer.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/net-MasterServer.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/net-MasterServer.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/net-MasterServer.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-MasterServer.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-MasterServer.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-MasterServer.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-MasterServer.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-MasterServer.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-MasterServer.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-MasterServer.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-MasterServer.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-MasterServer.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-MasterServer.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li>主服务器（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-NetworkLevelLoad.html"></a></span><div class="tip">网络加载关卡（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-MasterServerBuild.html"></a></span><div class="tip">自行构建 Unity 网络服务器（旧版）</div>
+</div>
+</div></div>
+<h1>主服务器（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>（对于新项目，应使用 <a href="UNet.html">5.1 版中引入的新网络系统</a>。此信息适用于使用旧网络系统的旧版项目。）</em></p>
+
+<p>主服务器是可将游戏实例与想要连接它们的玩家客户端联系起来的集合位置。该服务器还可以隐藏端口号和 IP 地址，并执行设置网络连接时所需的其他技术任务，例如防火墙处理和 NAT 穿透。</p>
+
+<p>每个运行的游戏实例都要向主服务器提供__游戏类型__。当玩家连接主服务器并从主服务器查询匹配的__游戏类型__时，服务器将发回正在运行的游戏列表以及每个游戏中的玩家数量及是否需要密码来参与游戏。用于交换此数据的两个函数为服务器的 <a href="../ScriptReference/MasterServer.RegisterHost.html">MasterServer.RegisterHost()</a> 和玩家客户端的 <a href="../ScriptReference/MasterServer.RequestHostList.html">MasterServer.RequestHostList()</a>。</p>
+
+<p>调用 <strong>RegisterHost</strong> 时，必须为所要注册的主机传递三个参数：_gameTypeName_（前面提到的__游戏类型__）、<em>gameName</em> 和 <em>comment</em>。<strong>RequestHostList</strong> 将所要连接的主机的 <em>gameTypeName</em> 作为参数。然后，该类型的所有已注册主机将返回到请求客户端。此操作为异步操作，全部到达后可通过 <strong>PollHostList()</strong> 检索完整列表。</p>
+
+<p>主服务器的 NAT 穿透任务实际上由一个名为__协调程序 (Facilitator)__ 的独立进程处理，但 Unity 的主服务器会并行运行两个服务。</p>
+
+<p>__游戏类型__是一个标识名称，对于每个游戏都应该是唯一的（虽然 Unity 不提供任何中央注册系统来保证这一点）。因此，应选择一个不太可能被其他人使用的独特名称。如果您的游戏有多个不同版本，可能需要警告用户其客户端与正在运行的服务器版本不兼容。版本信息可传入 comment 字段（这实际上是二进制数据，因此能够以任何所需的形式传入版本）。游戏名称只是由任何人设置的特定游戏实例的名称。</p>
+
+<p>如果对主服务器进行了适当修改，则可以更高级的方式使用 comment 字段（有关如何执行此操作的详细信息，请参阅本页面底部的_高级_部分）。例如，您可以保留 comment 字段的前十个字节用于保存密码，然后在收到主机更新时在主服务器中提取密码。如果密码检查失败，它可以拒绝主机更新。</p>
+
+<h2>注册游戏</h2>
+
+<p>在注册游戏之前，必须根据主机是否支持 NAT 功能来启用或禁用该功能；您可以使用 <a href="../ScriptReference/Network.InitializeServer.html">Network.InitializeServer</a> 的 <strong>useNat</strong> 参数执行此操作。</p>
+
+<p>可使用如下所示的代码启动服务器：</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Network;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void OnGUI() {
+        if (GUILayout.Button ("Start Server"))
+        {
+            // 如果不存在公共 IP，应使用 NAT 穿透
+            Network.InitializeServer(32, 25002, !Network.HavePublicAddress());
+            MasterServer.RegisterHost("MyUniqueGameType", "JohnDoes game", "l33t game for all");
+        }
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>function OnGUI() {
+    if (GUILayout.Button ("Start Server"))
+    {
+        // 如果不存在公共 IP，应使用 NAT 穿透
+        Network.InitializeServer(32, 25002, !Network.HavePublicAddress());
+        MasterServer.RegisterHost("MyUniqueGameType", "JohnDoes game", "l33t game for all");
+    }
+}
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p>此处，我们通过检查计算机是否具有公共地址来决定是否需要 NAT 穿透。有一个称为 <a href="../ScriptReference/Network.TestConnection.html">Network.TestConnection</a> 更复杂函数可以指示主机是否可执行 NAT。该函数还对公共 IP 地址进行连接测试，查看是否有防火墙阻止游戏端口。具有公共 IP 地址的计算机始终能通过 NAT 测试，但如果测试失败，主机将<strong>无法</strong>连接到 NAT 客户端。在这种情况下，应通知用户必须启用端口转发才能使游戏运行。国内宽带连接通常具有 NAT 地址，但无法设置端口转发（因为它们没有个人公共 IP 地址）。在这些情况下，如果 NAT 测试失败，应告知用户运行服务器是不妥的，因为只有同一本地网络上的客户端才能连接。</p>
+
+<p>如果主机启用 NAT 功能但不需要该功能，那么仍然可以访问主机。但是，无法执行 NAT 穿透的客户端可能会错误地认为自己无法在服务器启用 NAT 的基础上进行连接。</p>
+
+<h2>连接到游戏</h2>
+
+<p>在主机注册或查询期间会发送一个 <strong>HostData</strong> 对象。该对象包含有关主机的以下信息：</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+	<th style="text-align:left;"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">boolean</td>
+	<td style="text-align:left;"><strong>useNat</strong></td>
+	<td style="text-align:left;">指示主机是否使用 NAT 穿透。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;"><strong>gameType</strong></td>
+	<td style="text-align:left;">主机的游戏类型。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;"><strong>gameName</strong></td>
+	<td style="text-align:left;">主机的游戏名称。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">int</td>
+	<td style="text-align:left;"><strong>connectedPlayers</strong></td>
+	<td style="text-align:left;">当前连接的玩家/客户端数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">int</td>
+	<td style="text-align:left;"><strong>playerLimit</strong></td>
+	<td style="text-align:left;">允许的最多并发玩家/客户端数量。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">String[]</td>
+	<td style="text-align:left;"><strong>IP</strong></td>
+	<td style="text-align:left;">主机的内部 IP 地址。在具有公共地址的服务器上，外部和内部地址是相同的。此字段定义为数组，因为在内部连接时需要检查与计算机的所有活动接口关联的所有 IP 地址。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">int</td>
+	<td style="text-align:left;"><strong>port</strong></td>
+	<td style="text-align:left;">主机的接口。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">boolean</td>
+	<td style="text-align:left;"><strong>passwordProtected</strong></td>
+	<td style="text-align:left;">指示是否需要提供密码才能连接到此主机。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;"><strong>comment</strong></td>
+	<td style="text-align:left;">在主机注册期间设置的任何备注。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">String</td>
+	<td style="text-align:left;"><strong>guid</strong></td>
+	<td style="text-align:left;">主机的网络 GUID。使用 NAT 穿透技术进行连接时需要此信息。</td>
+</tr>
+</tbody>
+</table>
+
+<p>客户端可以使用此信息来查看主机的连接功能。启用 NAT 后，您需要在连接时使用主机的 GUID。在连接期间检索 <strong>HostData</strong> 时，会自动为您处理此信息。连接例程可能如下所示：</p>
+
+<pre><code>using UnityEngine;
+using UnityEngine.Network;
+using System.Collections;
+
+public class ExampleScript : MonoBehaviour {
+    void Awake() {
+        MasterServer.RequestHostList("MadBubbleSmashGame");
+    }
+    
+    void OnGUI() {
+        HostData[] data = MasterServer.PollHostList();
+        // 轮训主机列表中的所有主机
+        foreach (var element in data)
+        {
+            GUILayout.BeginHorizontal();    
+            var name = element.gameName + " " + element.connectedPlayers + " / " + element.playerLimit;
+            GUILayout.Label(name);  
+            GUILayout.Space(5);
+            string hostInfo;
+            hostInfo = "[";
+            foreach (var host in element.ip)
+                hostInfo = hostInfo + host + ":" + element.port + " ";
+            hostInfo = hostInfo + "]";
+            GUILayout.Label(hostInfo);  
+            GUILayout.Space(5);
+            GUILayout.Label(element.comment);
+            GUILayout.Space(5);
+            GUILayout.FlexibleSpace();
+            if (GUILayout.Button("Connect"))
+            {
+                // 连接到 HostData 结构，在内部使用正确的方法（使用 NAT 时为 GUID）。
+                Network.Connect(element);           
+            }
+            GUILayout.EndHorizontal();  
+        }
+    }
+}
+</code></pre>
+
+<p><em>C# 脚本示例</em></p>
+
+<pre><code>function Awake() {
+    MasterServer.RequestHostList("MadBubbleSmashGame");
+}
+
+function OnGUI() {
+    var data : HostData[] = MasterServer.PollHostList();
+    // 访问主机列表中的所有主机
+    for (var element in data)
+    {
+        GUILayout.BeginHorizontal();    
+        var name = element.gameName + " " + element.connectedPlayers + " / " + element.playerLimit;
+        GUILayout.Label(name);  
+        GUILayout.Space(5);
+        var hostInfo;
+        hostInfo = "[";
+        for (var host in element.ip)
+            hostInfo = hostInfo + host + ":" + element.port + " ";
+        hostInfo = hostInfo + "]";
+        GUILayout.Label(hostInfo);  
+        GUILayout.Space(5);
+        GUILayout.Label(element.comment);
+        GUILayout.Space(5);
+        GUILayout.FlexibleSpace();
+        if (GUILayout.Button("Connect"))
+        {
+            // 连接到 HostData 结构，在内部使用正确的方法（使用 NAT 时为 GUID）。
+            Network.Connect(element);           
+        }
+        GUILayout.EndHorizontal();  
+    }
+}
+</code></pre>
+
+<p><em>JS 脚本示例</em></p>
+
+<p>此示例显示了主服务器返回的所有相关主机信息。在此基础上可添加其他有用的数据（如 ping 信息或主机的地理位置）。</p>
+
+<h2>NAT 穿透</h2>
+
+<p>NAT 穿透的可用性可以确定特定计算机是否适合用作服务器。虽然某些客户端可能可以连接，但其他一些客户端可能无法连接到任何 NAT 服务器。</p>
+
+<p>默认情况下，NAT 穿透是在主服务器的帮助下提供的，但不需要这样做。协调程序是实际用于 NAT 穿透服务的进程。如果两台机器连接到协调程序，那么只要使用外部 IP 和端口，它们就会表现为可以相互连接。主服务器用于提供此外部 IP 和端口信息（很难通过其他方式确定此信息）。这就是主服务器和协调程序如此紧密集成的原因。主服务器和协调程序在默认情况下具有相同的 IP 地址，要更改任何一方的地址，请使用 <a href="../ScriptReference/MasterServer-ipAddress.html">MasterServer.ipAddress</a>、<a href="../ScriptReference/MasterServer-port.html">MasterServer.port</a>、<a href="../ScriptReference/Network-natFacilitatorIP.html">Network.natFacilitatorIP</a> 和 <a href="../ScriptReference/Network-natFacilitatorPort.html">Network.natFacilitatorPort</a></p>
+
+<h2>高级</h2>
+
+<p>Unity Technologies 还有一个完全部署的主服务器可用于测试目的，这实际上是默认情况下使用的服务器。但是，源代码可供任何人免费使用，并且服务器可以部署在 Windows、Linux 和 Mac OS 上。除了简单地从源代码构建项目之外，有时还可能需要修改主服务器处理信息的方式及其通信方式。例如，您可以优化主机数据的处理或限制主机列表上返回的客户端数量。此类更改将需要修改源代码；有关如何进行此类操作的信息，请参阅<a href="net-MasterServerBuild.html">主服务器构建页面</a>。</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="net-NetworkLevelLoad.html"></a></span><div class="tip">网络加载关卡（旧版）</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-MasterServerBuild.html"></a></span><div class="tip">自行构建 Unity 网络服务器（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

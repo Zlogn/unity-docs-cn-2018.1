@@ -1,0 +1,255 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="高级网络概念（旧版） - Unity Manual">
+<title>高级网络概念（旧版） - Unity Manual</title>
+<meta name="description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta property="og:description" content="（对于新项目，应使用 5.1 版中引入的新网络系统。此信息适用于使用旧网络系统的旧版项目。）">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'net-HighLevelOverview';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-HighLevelOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-HighLevelOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-HighLevelOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-HighLevelOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-HighLevelOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-HighLevelOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-HighLevelOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-HighLevelOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-HighLevelOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-HighLevelOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/net-HighLevelOverview.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/net-HighLevelOverview.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/net-HighLevelOverview.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/net-HighLevelOverview.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/net-HighLevelOverview.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/net-HighLevelOverview.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/net-HighLevelOverview.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/net-HighLevelOverview.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/net-HighLevelOverview.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/net-HighLevelOverview.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/net-HighLevelOverview.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/net-HighLevelOverview.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/net-HighLevelOverview.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/net-HighLevelOverview.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="LegacyTopics.html">旧版主题</a></li>
+<li><a href="NetworkReferenceGuide.html">旧版网络参考指南</a></li>
+<li>高级网络概念（旧版）</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="NetworkReferenceGuide.html"></a></span><div class="tip">旧版网络参考指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-UnityNetworkElements.html"></a></span><div class="tip">Unity 中的网络元素（旧版）</div>
+</div>
+</div></div>
+<h1>高级网络概念（旧版）</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><em>（对于新项目，应使用 <a href="UNet.html">5.1 版中引入的新网络系统</a>。此信息适用于使用旧网络系统的旧版项目。）</em></p>
+
+<p>本部分介绍在使用 Unity 的网络架构开发游戏之前应该理解的一般网络概念。</p>
+
+<h2>什么是网络？</h2>
+
+<p>网络是两台或多台计算机之间的通信。一个基本理念是__客户端__（请求信息的计算机）和__服务器__（响应信息请求的计算机）之间的关系。服务器可以是所有客户端使用的专用主机，也可以是运行游戏（客户端）但也作为其他玩家的服务器的玩家计算机。一旦建立了服务器并且客户端已连接到该服务器，这两台计算机就可以按照游戏玩法的需求交换数据。</p>
+
+<p>创建网络游戏需要非常关注一些非常具体的细节。尽管网络操作很容易在 Unity 中设计和创建，但网络仍然相当复杂。Unity 中的一种主要设计决策是使网络尽可能鲁棒和灵活。这意味着，作为游戏创建者，您需要应对在其他引擎中以自动但不太鲁棒方式处理的情况。您所做的选择可能会对您的游戏设计产生重大影响，因此最好在设计阶段尽早做出这些选择。了解网络概念将有助于您很好地规划游戏设计，并避免在实现过程中出现问题。</p>
+
+<h2>网络方法</h2>
+
+<p>构建网络游戏有两种常见并经过检验的方法，分别称为__授权服务器 (Authoritative Server)__ 和__非授权服务器 (Non-Authoritative Server)__。两种方法都依赖于服务器连接客户端并在它们之间传递信息。两者都能为最终用户提供隐私保护，因为客户端从不真正直接相互连接或将 IP 地址透露给其他客户端。</p>
+
+<h3>授权服务器</h3>
+
+<p>授权服务器方法要求服务器执行所有世界模拟、游戏规则应用和对玩家客户端输入的处理。每个客户端将其输入（以击键或请求操作的形式）发送到服务器，并从服务器持续接收游戏的当前状态。客户端绝不对游戏状态本身进行任何更改。相反，客户端告诉服务器自己想要做什么，然后服务器处理该请求，并回复客户端以解释发生的结果。</p>
+
+<p>从根本上说，玩家想要做什么和实际发生了什么之间存在着一层隔离。因此，服务器可先监听每个客户端的请求，然后再决定如何更新游戏状态。</p>
+
+<p>这种方法的一个优点是客户端更难作弊。例如，客户端不可能以欺骗的方式告诉服务器（因此也包括其他客户端）自己杀死了敌人，因为客户端不能自行做出该决定。客户端只能告诉服务器在这里使用一把武器开火了，此后将由服务器决定是否成功杀敌。</p>
+
+<p>授权服务器的另一个示例是依赖于物理系统的多人游戏。如果允许每个客户端运行自己的物理模拟，那么客户端之间的细微变化可能会导致它们逐渐变得不同步。但是，如果在中央服务器上处理所有物理对象的模拟，然后将更新的状态发送回客户端，就可以保证全部客户端一致。</p>
+
+<p>授权服务器的潜在缺点是消息通过网络传输需要一定的时间。如果玩家按下控制键向前移动，而从服务器返回响应需要十分之一秒时间，则玩家将感受到延迟。此问题的一种解决方案是使用所谓的__客户端预测__。此技术的本质是允许客户端更新自己本地版本的游戏状态，但必须能够在必要时从服务器的权威版本接收更正。通常，此技术应当仅用于简单的游戏操作，而不能用于游戏状态发生重大逻辑改变的情况。例如，向玩家报告已杀死敌人，然后等待服务器推翻此决定，这种做法是不明智的。</p>
+
+<p>由于客户端预测属于高级主题，我们不打算在本指南中进行介绍，但如果您想进一步了解此技术，可参考相关书籍和 Web 资源。</p>
+
+<p>授权服务器比非授权服务器具有更大的处理开销。当服务器不需要处理所有的游戏状态更改时，可在客户端之间分散大量此类负载。</p>
+
+<h3>非授权服务器</h3>
+
+<p>非授权服务器不控制每个用户输入的结果。客户端本身在本地处理用户输入和游戏逻辑，然后将任何确定动作的结果发送到服务器。然后，服务器将所有操作与世界状态同步。从设计的角度来看，这更容易实现，因为服务器实际上只是在客户端之间传递消息，并不对客户端执行的操作做额外处理。</p>
+
+<p>这种方法不需要任何类型的_预测_方法，因为客户端会自己处理所有物理属性和事件并将发生的情况传递给服务器。客户端是自身对象的_所有者_，并且是唯一允许通过网络发送对这些对象的本地修改的代理。</p>
+
+<h2>网络通信方法</h2>
+
+<p>现在我们已了解了网络游戏的基本架构，接下来我们将探讨客户端和服务器之间如何在底层相互通信。</p>
+
+<p>有两种相关的方法：__远程过程调用 (Remote Procedure Calls)__ 和__状态同步 (State Synchronization)__。在某一具体游戏中的不同地方同时使用这两种方法并不罕见。</p>
+
+<h3>远程过程调用</h3>
+
+<p>远程过程调用 (RPC) 用于通过网络调用其他计算机上的函数，但“网络”也可以表示在同一台计算机上运行的客户端和服务器之间的消息通道。客户端可以将 RPC 发送到服务器，服务器可以将 RPC 发送到一个或多个客户端。通常，RPC 用于不经常发生的操作。例如，如果客户端通过翻转开关来实现开门，它可以向服务器发送 RPC，告知服务器已开门。然后，服务器可以向所有客户端发送另一个 RPC，调用客户端的本地函数来打开同一扇门。它们用于管理和执行单个事件。</p>
+
+<h3>状态同步</h3>
+
+<p>状态同步用于共享不断变化的数据。此情况最好的例子就是玩家在动作游戏中的位置。玩家总是在移动、跑来跑去、跳跃等等。网络上的所有其他玩家，甚至那些不在本地控制此玩家的，都需要知道他们在哪里以及他们在做什么。通过不断地传递关于此玩家位置的数据，游戏可以准确地向其他玩家表示该位置。</p>
+
+<p>这种数据定期并频繁通过网络发送。由于此数据具有时间敏感性，通过网络从一台机器传输到另一台机器需要时间，因此尽可能减少发送的数据量非常重要。简单来说，状态同步理所当然需要大量带宽，因此应尽可能减少带宽使用量。</p>
+
+<h3>将服务器和客户端连接到一起</h3>
+
+<p>将服务器和客户端连接到一起可能是一个复杂的过程。计算机可使用私有或公共 IP 地址，并可使用本地或外部防火墙阻止访问。Unity 网络功能旨在应对尽可能多的情况，但没有通用的解决方案。</p>
+
+<p>私有地址是不能直接从 Internet 访问的 IP 地址（根据地址的实现方法，也称为网络地址转换 (NAT) 地址）。简言之，私有地址将通过本地路由器，由路由器将地址转换为公共地址。通过这种机制，许多具有私有地址的计算机可以使用单个公共 IP 地址与互联网进行通信。这是可以的，直到互联网上其他地方有人想要与其中一个私有地址联系。此情况下的通信必须通过路由器的公共地址进行，然后路由器必须将消息传递到私有地址。一种称为 NAT 穿透的技术使用称为_协调程序_的共享服务器来调解通信，从而可以从公共地址访问私有地址。此技术让私有地址首先联系协调程序，而协调程序将“穿透”本地路由器。协调程序现在可以看到私有地址正在使用的公共 IP 地址和端口。使用此信息，Internet 上的任何计算机现在都可以直接与无法通过其他方式访问的私有地址连接。（请注意，NAT 穿透的细节在现实中比这更复杂。）</p>
+
+<p>公共地址更简单直接。此处的主要问题是内部或外部防火墙可能阻止连接（内部防火墙是在所保护的计算机上本地运行的防火墙）。对于内部防火墙，可能会要求用户解除特定端口的限制，以便顺利访问游戏服务器。相反，外部防火墙不受用户控制。Unity 可尝试使用 NAT 穿透技术来穿透外部防火墙进行访问，但这种技术无法保证成功。我们的测试表明该技术通常在实践中有效，但似乎没有任何正式研究证实这一结论。</p>
+
+<p>刚才提到的连接问题对服务器和客户端的影响不同。客户端请求仅涉及相对简单的传出网络流量。如果客户端具有公共地址，那么几乎没有连接问题，因为传出流量通常仅在强制进行访问限制的公司网络上被阻止。如果客户端具有私有地址，则可以连接到所有服务器，但具有私有地址而不能进行 NAT 穿透的服务器除外（稍后将对此进行详细说明）。服务器端更复杂，因为服务器需要能够接受未知来源的传入连接。使用公共地址时，服务器需要向 Internet 开放游戏端口（即不被防火墙阻止），否则无法接受来自客户端的任何连接，进而无法使用。如果服务器具有私有地址，则必须能够执行 NAT 穿透以允许连接，并且客户端也必须允许 NAT 穿透以便服务器能连接到它。</p>
+
+<p>Unity 提供了能够测试所有这些不同连接情况的工具。当确定可以建立连接时，有两种方法实现连接：直接连接（客户端需要知道服务器的 DNS 名称或 IP 地址）和通过主服务器进行连接。主服务器允许服务器向客户端通告自身的存在，而客户端不需要事先知道任何关于特定游戏服务器的信息。</p>
+
+<h2>最小化网络带宽</h2>
+
+<p>在跨多个客户端使用状态同步时，您不一定需要同步每个细节以使对象看起来同步。例如，在同步角色 Avatar 时，只需在客户端之间发送其位置和旋转。即使角色本身复杂得多并可能包含深 <strong>变换</strong> 层级，也不需要共享有关整个层级的数据。</p>
+
+<p>游戏中的大量数据实际上是静态的，客户端既不需要在最初传输这些数据，也不需要后续同步这些数据。不频繁或一次性的 RPC 调用应该足以使许多功能正常运行。应充分利用您在游戏的每次安装中都会存在的数据，并尽可能让客户端自己工作。例如，所有安装中都存在纹理和网格等资源，这些资源通常不会改变，因此不必同步这些资源。这是一个简单的示例，但应该能让您思考在客户端之间共享哪些关键数据。此数据是您应该共享的唯一数据。</p>
+
+<p>可能很难完全确定需要共享的内容和不需要共享的内容，特别是以前从未开发过网络游戏的情况下。切记，您可以使用具有关卡名称的单个 RPC 调用，使所有客户端加载整个指定关卡并自动添加自己的网络元素。通过构建游戏使每个客户端尽可能自给自足，这样将减少带宽。</p>
+
+<h2>多人游戏性能</h2>
+
+<p>服务器本身的物理位置和性能会极大地影响在服务器上运行的游戏的可玩性。如果客户端位于远离服务器的大陆，可能会发生很明显的延迟。这是互联网的物理限制，唯一真正的解决方案是安排服务器尽可能靠近使用服务器的客户端，至少应位于同一个大陆上。</p>
+
+<h2>额外资源</h2>
+
+<p>我们收集了以下介绍网络知识的其他资源的链接：</p>
+
+<ul>
+<li>http://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking</li>
+<li>http://developer.valvesoftware.com/wiki/Lag_Compensation</li>
+<li>http://developer.valvesoftware.com/wiki/Working_With_Prediction</li>
+<li>http://www.gamasutra.com/resource_guide/20020916/lambright_01.htm</li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="NetworkReferenceGuide.html"></a></span><div class="tip">旧版网络参考指南</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="net-UnityNetworkElements.html"></a></span><div class="tip">Unity 中的网络元素（旧版）</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

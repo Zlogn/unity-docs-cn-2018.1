@@ -1,0 +1,550 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="颜色分级 (Color Grading) - Unity Manual">
+<title>颜色分级 (Color Grading) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/PostProcessing-ColorGrading-0.jpg">
+<meta name="description" content="本页的效果描述是指在后期处理堆栈中找到的默认效果。">
+<meta property="og:description" content="本页的效果描述是指在后期处理堆栈中找到的默认效果。">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'PostProcessing-ColorGrading';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessing-ColorGrading.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessing-ColorGrading.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessing-ColorGrading.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessing-ColorGrading.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessing-ColorGrading.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessing-ColorGrading.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessing-ColorGrading.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessing-ColorGrading.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessing-ColorGrading.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessing-ColorGrading.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/PostProcessing-ColorGrading.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/PostProcessing-ColorGrading.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/PostProcessing-ColorGrading.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/PostProcessing-ColorGrading.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/PostProcessing-ColorGrading.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/PostProcessing-ColorGrading.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/PostProcessing-ColorGrading.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/PostProcessing-ColorGrading.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/PostProcessing-ColorGrading.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/PostProcessing-ColorGrading.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/PostProcessing-ColorGrading.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/PostProcessing-ColorGrading.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/PostProcessing-ColorGrading.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/PostProcessing-ColorGrading.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="PostProcessingOverview.html">后期处理概述</a></li>
+<li>颜色分级 (Color Grading)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip">泛光 (Bloom)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-UserLut.html"></a></span><div class="tip">用户 LUT</div>
+</div>
+</div></div>
+<h2>颜色分级 (Color Grading)</h2>
+
+<p>本页的效果描述是指在后期处理堆栈中找到的默认效果。</p>
+
+<p>颜色分级是改变或校正最终图像的颜色和亮度的过程。可将其想象为在 Instagram 等软件中应用滤镜。</p>
+
+<p>后期处理栈中包含的颜色分级工具是完全实时的 HDR 工具，且内部处理在 <a href="http://www.oscars.org/science-technology/sci-tech-projects/aces">ACES</a> 颜色空间中完成。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-0.jpg" alt="已应用颜色分级的场景。">
+<figcaption>已应用颜色分级的场景。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-1.jpg" alt="未应用颜色分级的场景。">
+<figcaption>未应用颜色分级的场景。</figcaption>
+</figure>
+
+<p>后期处理栈中提供的颜色分级工具分为五个部分：</p>
+
+<ul>
+<li><p>色调映射 (Tonemapping)</p></li>
+<li><p>基本 (Basic)</p></li>
+<li><p>通道混合器 (Channel Mixer)</p></li>
+<li><p>轨迹球 (Trackballs)</p></li>
+<li><p>分级曲线 (Grading Curves)</p></li>
+</ul>
+
+<h3>要求</h3>
+
+<ul>
+<li><p>RGBAHalf 纹理格式</p></li>
+<li><p>Shader Model 3</p></li>
+</ul>
+
+<p>请参阅<a href="GraphicsEmulation.html">图形硬件功能和仿真</a>页面，查看更多详细信息和兼容硬件列表。</p>
+
+<h2>色调映射</h2>
+
+<p>色调映射是将图像的 HDR 值重新映射到适合在屏幕上显示的范围内的过程。使用 HDR 摄像机时应始终应用色调映射，否则会将高于 1 的颜色强度值钳制为 1，从而改变场景亮度平衡。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-2.jpg" alt="应用中性色调映射器 (Neutral Tonemapper) 后的相同场景（注意天空仍然亮起）。">
+<figcaption>应用中性色调映射器 (Neutral Tonemapper) 后的相同场景（注意天空仍然亮起）。</figcaption>
+</figure>
+
+<p>后期处理栈附带提供三种色调映射模式：</p>
+
+<ul>
+<li><p>None（不应用色调映射；在 LDR 中工作时选择此项）</p></li>
+<li><p>Neutral</p></li>
+<li><p>Filmic (ACES)</p></li>
+</ul>
+
+<h2>Neutral Tonemapper</h2>
+
+<p>Neutral Tonemapper（中性色调映射器）仅进行范围重新映射，对色调和饱和度的影响最小，通常作为进行广泛颜色分级的良好起点。此色调映射器基于 John Hable 和 Jim Hejl 的成果，提供了对色调映射曲线的完全参数控制，是大多数情况下使用的推荐色调映射器。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-3.png" alt="选择 Neutral Tonemapper 后的 Tonemapping UI">
+<figcaption>选择 Neutral Tonemapper 后的 Tonemapping UI</figcaption>
+</figure>
+
+<h3>属性</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Black In</strong></td>
+	<td style="text-align:left;">黑点的内控点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White In</strong></td>
+	<td style="text-align:left;">白点的内控点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Black Out</strong></td>
+	<td style="text-align:left;">黑点的外控点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Out</strong></td>
+	<td style="text-align:left;">白点的外控点。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Level</strong></td>
+	<td style="text-align:left;">预曲线白点调整。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>White Clip</strong></td>
+	<td style="text-align:left;">后曲线白点调整。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Filmic (ACES) Tonemapper</h2>
+
+<p>Filmic (ACES) Tonemapper 使用参考 ACES 色调映射器的近似值来获得更强的电影效果。因此，该选项比中性 (Neutral) 选项更具对比度，并对实际色调和饱和度有影响。这种色调映射器最简单易用，因为它不需要用户输入就可以为场景提供标准的电影效果。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-4.png" alt="选择 Filmic (ACES) Tonemapper 后的 Tonemapping UI">
+<figcaption>选择 Filmic (ACES) Tonemapper 后的 Tonemapping UI</figcaption>
+</figure>
+
+<h2>基本 (Basic)</h2>
+
+<p>Basic 部分提供最简单的颜色分级工具，如温度 (Temperature) 和对比度 (Contrast)。这是进行颜色校正的推荐起点。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-5.jpg" alt="仅应用 Basic Color Grading（基本颜色分级）后的相同场景">
+<figcaption>仅应用 Basic Color Grading（基本颜色分级）后的相同场景</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-6.png" alt="Basic Color Grading（基本颜色分级）UI">
+<figcaption>Basic Color Grading（基本颜色分级）UI</figcaption>
+</figure>
+
+<h3>属性</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Post Exposure</strong></td>
+	<td style="text-align:left;">调整场景的整体曝光（以 EV 为单位）。此设置在 HDR 效果之后和色调映射之前应用，因此不会影响链中的先前效果。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Temperature</strong></td>
+	<td style="text-align:left;">将白平衡设置为自定义色温。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tint</strong></td>
+	<td style="text-align:left;">设置白平衡以补偿绿色或洋红色。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Hue Shift</strong></td>
+	<td style="text-align:left;">改变所有颜色的色调。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Saturation</strong></td>
+	<td style="text-align:left;">推动所有颜色的强度。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Contrast</strong></td>
+	<td style="text-align:left;">扩大或缩小音调值的整体范围。</td>
+</tr>
+</tbody>
+</table>
+
+<h2>通道混合器 (Channel Mixer)</h2>
+
+<p>通道混合器用于修改每个输入颜色通道对输出通道整体混合的影响。例如，增加绿色通道对红色通道整体混合的影响将调整包含绿色（包括中性/单色）的图像的所有区域，使其在色调中变得更偏红。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-7.jpg" alt="仅应用通道混合器 (Channel Mixer) 后的相同场景（增加蓝色对红色的影响）。">
+<figcaption>仅应用通道混合器 (Channel Mixer) 后的相同场景（增加蓝色对红色的影响）。</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-8.png" alt="Channel Mixer UI">
+<figcaption>Channel Mixer UI</figcaption>
+</figure>
+
+<h3>属性</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Channel</strong></td>
+	<td style="text-align:left;">选择要修改的输出通道</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Red</strong></td>
+	<td style="text-align:left;">修改整个混合中红色通道的影响</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Green</strong></td>
+	<td style="text-align:left;">修改整个混合中绿色通道的影响</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Blue</strong></td>
+	<td style="text-align:left;">修改整个混合中蓝色通道的影响</td>
+</tr>
+</tbody>
+</table>
+
+<h2>轨迹球 (Trackballs)</h2>
+
+<p>轨迹球用于在线性 (Linear) 或对数 (Log) 空间中执行三向颜色分级。在 LDR 中工作时，建议使用线性轨迹球以获得更好的体验。在 HDR 中工作时，建议使用对数轨迹球以实现更好的控制，但线性轨迹球仍然有用。</p>
+
+<p>调整轨迹球上点的位置具有在给定色调范围内将图像色调移向该颜色的效果。不同的轨迹球用于影响图像内的不同范围。调整轨迹球下方的滑动条会偏移该范围的颜色亮度</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-9.jpg" alt="仅应用对数轨迹球后的相同场景。">
+<figcaption>仅应用对数轨迹球后的相同场景。</figcaption>
+</figure>
+
+<h2>对数 (Log)</h2>
+
+<p>对数模式分级可压缩颜色和对比度图像数据的分布，从而模拟可由光学胶片打印机完成的颜色调整过程。这种方式通常是进行类似胶片分级的首选方式，强烈建议在使用 HDR 值时选用此选项。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-10.png" alt="选择 Log 后的 Trackballs UI">
+<figcaption>选择 Log 后的 Trackballs UI</figcaption>
+</figure>
+
+<h3>属性</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Slope</strong></td>
+	<td style="text-align:left;">增益函数</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Power</strong></td>
+	<td style="text-align:left;">伽马函数</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Offset</strong></td>
+	<td style="text-align:left;">对整个信号进行移位</td>
+</tr>
+</tbody>
+</table>
+
+<h2>线性 (Linear)</h2>
+
+<p>这是对数控制的另一种优化的三向变换，可处理线性编码的数据。在 LDR 中工作时首选此方法。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-11.png" alt="选择 Linear 后的 Trackballs UI">
+<figcaption>选择 Linear 后的 Trackballs UI</figcaption>
+</figure>
+
+<h3>属性</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>属性：</strong></th>
+	<th style="text-align:left;"><strong>功能：</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Lift</strong></td>
+	<td style="text-align:left;">将整个信号进行更高或更低的移位。对阴影有更明显的影响。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gamma</strong></td>
+	<td style="text-align:left;">控制中音音调的幂函数。</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Gain</strong></td>
+	<td style="text-align:left;">增加信号。使高光更加明亮</td>
+</tr>
+</tbody>
+</table>
+
+<h2>分级曲线 (Grading Curves)</h2>
+
+<p>渐变曲线（也称为对比曲线）是一种调整图像色调、饱和度或亮度的特定范围的高级方法。通过调整五个图形上的曲线，即可实现特定色调替换的效果，使某些亮度降低等等。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-12.jpg" alt="仅应用 Hue vs Hue 分级曲线来实现颜色替换后的相同场景">
+<figcaption>仅应用 Hue vs Hue 分级曲线来实现颜色替换后的相同场景</figcaption>
+</figure>
+
+<p>后期处理栈中提供了五种分级曲线类型：</p>
+
+<ul>
+<li><p>YRGB</p></li>
+<li><p>Hue vs Hue</p></li>
+<li><p>Hue vs Sat</p></li>
+<li><p>Sat vs Sat</p></li>
+<li><p>Lum vs Sat</p></li>
+</ul>
+
+<h2>YRGB 曲线</h2>
+
+<p>影响整个图像中选定的输入通道强度。可在 Y、R、G 和 B 之间选择输入通道，其中 Y 是应用于所有通道的全局强度偏移。图的 X 轴表示输入强度，Y 轴表示输出强度。这可用于进一步调整基本属性（如对比度和亮度）的外观。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-13.png" alt="选择 YRGB 后的 Grading Curves UI">
+<figcaption>选择 YRGB 后的 Grading Curves UI</figcaption>
+</figure>
+
+<h2>Hue vs Hue 曲线</h2>
+
+<p>用于在特定范围内进行色调移位。该曲线根据输出色调（Y 轴）移动输入色调（X 轴）。这可用于微调特定范围的色调或执行颜色替换。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-14.png" alt="选择 Hue vs Hue 后的 Grading Curves UI">
+<figcaption>选择 Hue vs Hue 后的 Grading Curves UI</figcaption>
+</figure>
+
+<h2>Hue vs Sat 曲线</h2>
+
+<p>用于调整特定范围内色调的饱和度。该曲线根据输入色调（X 轴）调整饱和度（Y 轴）。这可用于调低特别明亮的区域或创建艺术效果，例如除单一主色外的单色。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-15.png" alt="选择 Hue vs Sat 后的 Grading Curves UI">
+<figcaption>选择 Hue vs Sat 后的 Grading Curves UI</figcaption>
+</figure>
+
+<h2>Sat vs Sat 曲线</h2>
+
+<p>用于调整某些饱和度区域的饱和度。该曲线根据输入饱和度（X 轴）调整饱和度（Y 轴）。这可用于微调使用基本颜色分级进行的饱和度调整。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-16.png" alt="选择 Sat vs Sat 后的 Grading Curves UI">
+<figcaption>选择 Sat vs Sat 后的 Grading Curves UI</figcaption>
+</figure>
+
+<h2>Lum vs Sat 曲线</h2>
+
+<p>用于调整某些亮度区域的饱和度。该曲线根据输入亮度（X 轴）调整饱和度（Y 轴）。这可用于使黑暗区域去饱和，从而提供有趣的视觉对比。</p>
+
+<figure>
+<img src="../uploads/Main/PostProcessing-ColorGrading-17.png" alt="选择 Lum vs Sat 后的 Grading Curves UI">
+<figcaption>选择 Lum vs Sat 后的 Grading Curves UI</figcaption>
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit"> 2017–05–24 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">5.6 中的新功能</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PostProcessing-Bloom.html"></a></span><div class="tip">泛光 (Bloom)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PostProcessing-UserLut.html"></a></span><div class="tip">用户 LUT</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

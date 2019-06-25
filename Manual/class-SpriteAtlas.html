@@ -1,0 +1,330 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC35ML');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="精灵图集 - Unity Manual">
+<title>精灵图集 - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2018.1/uploads/Main/SpriteAtlas1.png">
+<meta name="description" content="精灵图集 (Sprite Atlas) 是一种资源">
+<meta property="og:description" content="精灵图集 (Sprite Atlas) 是一种资源">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-SpriteAtlas';
+      if(!page) page = 'index';
+      var version = '2018.1';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC35ML" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-SpriteAtlas.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-SpriteAtlas.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-SpriteAtlas.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-SpriteAtlas.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-SpriteAtlas.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-SpriteAtlas.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-SpriteAtlas.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-SpriteAtlas.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-SpriteAtlas.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-SpriteAtlas.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2018.1/Documentation/Manual/class-SpriteAtlas.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2018.1/Manual/class-SpriteAtlas.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2018.1/Manual/class-SpriteAtlas.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2018.1/Manual/class-SpriteAtlas.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2018.1</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-SpriteAtlas.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-SpriteAtlas.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-SpriteAtlas.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-SpriteAtlas.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-SpriteAtlas.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-SpriteAtlas.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-SpriteAtlas.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-SpriteAtlas.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-SpriteAtlas.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-SpriteAtlas.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2018.1)</a></li>
+<li><a href="Unity2D.html">2D</a></li>
+<li><a href="Sprites.html">精灵</a></li>
+<li>精灵图集</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpriteMask.html"></a></span><div class="tip">精灵遮罩</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Tilemap.html"></a></span><div class="tip">Tilemap</div>
+</div>
+</div></div>
+<h1>精灵图集</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>精灵图集 (Sprite Atlas) 是一种资源</p>
+
+<p>精灵图集是通过 Editor 中的菜单选项创建的，并将作为项目文件夹中的资源 (*.spriteatlas) 保留。</p>
+
+<h3>统一设置</h3>
+
+<p>精灵图集资源为打包的纹理提供一组纹理设置。无论在图集内包含的精灵的纹理设置是什么，结果图集纹理将仅遵循图集资源中的设置。</p>
+
+<h3>运行时访问</h3>
+
+<p>精灵图集资源具有可在运行时访问的运行时表示。</p>
+
+<h3>变体</h3>
+
+<p>用户将能够创建另一个精灵图集资源，并将其声明为项目中现有精灵图集的变体。然后，该变体将复制主精灵图集的图集纹理，并根据乘数调整大小。</p>
+
+<h3>Sprite Packer 设置</h3>
+
+<p>默认情况下已禁用 Sprite Packer，但可从 Editor Settings（选择 <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Editor__）中对其进行配置。可将精灵打包模式从 </strong>Disabled__ 更改为以下模式之一：</p>
+
+<ul>
+<li>__Enabled for Builds__（如果只想对构建使用打包，而在播放模式下不使用打包）。</li>
+<li>__Always Enabled__（如果希望打包的精灵在播放模式下从精灵图集内解析其纹理，但在编辑模式下从原始纹理中解析其纹理）。</li>
+</ul>
+
+<p>在播放模式下测试从资源包加载的打包的精灵时，请使用 <strong>Always Enabled</strong>。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteAtlas1.png" alt="">
+</figure>
+
+<h2>如何创建精灵图集</h2>
+
+<p>精灵图集是 Unity 项目中的一种资源。可通过 Project 视图创建精灵图集，并可在创建后立即使用。要创建精灵图集，请从主菜单选择 <strong>Asset &gt; Create &gt; Sprite Atlas</strong>。</p>
+
+<h2>属性</h2>
+
+<figure>
+<img src="../uploads/Main/SpriteAtlas2.png" alt="">
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性</th>
+	<th style="text-align:left;">功能</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Type</td>
+	<td style="text-align:left;">将图集的类型设置为 Master 或 Variant Atlas。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Include in build</td>
+	<td style="text-align:left;">始终在构建中包含图集资源。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Allow Rotation</td>
+	<td style="text-align:left;">允许精灵旋转以进行打包</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Tight Packing</td>
+	<td style="text-align:left;">非矩形打包</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Read/Write Enabled</td>
+	<td style="text-align:left;">如果希望从脚本中读取纹理数据，请将此属性设置为 true。将其设置为 false 可阻止脚本读取纹理数据。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Generate Mip Maps</td>
+	<td style="text-align:left;">选中此复选框可禁止生成 Mipmap。Mipmap 是纹理的一系列较小版本，适合纹理在屏幕上非常小时使用。</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Filter Mode</td>
+	<td style="text-align:left;">选择纹理的过滤方式</td>
+</tr>
+<tr>
+	<td style="text-align:left;">特定于平台的覆盖面板</td>
+	<td style="text-align:left;">可使用特定于平台的覆盖面板设置默认选项（使用 Default），然后使用面板顶部的按钮针对特定平台覆盖这些选项的设置。<br><a href="class-TextureImporterOverride.html">https://docs.unity3d.com/Manual/class-TextureImporterOverride.html</a>
+</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Objects For Packing</td>
+	<td style="text-align:left;">要包含在打包的图集内的对象。可将文件夹、纹理或单个精灵添加到列表中。</td>
+</tr>
+</tbody>
+</table>
+
+<h3>分配要加入图集的资源</h3>
+
+<p>可将文件夹、纹理或精灵分配给精灵图集。可将整个文件夹分配给精灵图集资源，该文件夹中的所有纹理（包括子文件夹）都将被打包。分配单个纹理时，所有已定义的精灵都将包括到图集内。也可以将单个精灵分配给图集，并且不考虑相同纹理内的其他精灵。</p>
+
+<figure>
+<img src="../uploads/Main/SpriteAtlas3.png" alt="">
+</figure>
+
+<p>1.若要添加需要加入图集的资源，请选择图集资源，并通过向列表中添加新条目或将资源从项目拖放到 Inspector 的列表区域来添加资源。可将文件夹、纹理或精灵添加到图集。</p>
+
+<p>2.为生成的图集设定所需的设置。对设置进行的更改始终会将此图集标记为已修改状态，并会在打包阶段再次打包。</p>
+
+<p>3.可通过按 Inspector 中的“Pack Preview”按钮来预览打包的图集。此操作将触发此图集的打包。打包完成后，纹理将出现在预览部分中。</p>
+
+<p>4.所有修改了设置的图集都将在进入播放模式之前打包（如果选择了 __Always Enabled__）。</p>
+
+<h3>缩小的变体 (HD/SD)</h3>
+
+<p>用户将能够创建另一个精灵图集资源，并将其声明为项目中现有精灵图集的变体。然后，该变体将复制主精灵图集的图集纹理，并根据乘数调整大小。</p>
+
+<h3>创建精灵图集变体</h3>
+
+<figure>
+<img src="../uploads/Main/SpriteAtlas4.png" alt="">
+</figure>
+
+<p>1.将精灵图集的 Type 设置为 Variant。
+<img src="../uploads/Main/SpriteAtlas5.png" alt="">
+2.将一个图集分配给 Master Atlas 字段。
+<img src="../uploads/Main/SpriteAtlas6.png" alt="">
+3.设置变体的缩放因子。值的范围是 0.1 到 1。</p>
+
+<p>4.要将变体图集绑定为默认图集而不是主图集，只需选中变体图集内的“Include in build”选项，并取消选中主图集内的该选项。</p>
+
+<p>5.选中两者将随机包含一个图集（主图集/变体图集）。您可能希望取消选中两者以进行后期绑定，如下所述。</p>
+
+<h3>运行时精灵枚举</h3>
+
+<p>1.创建一个以“SpriteAtlas”为变量的自定义组件。</p>
+
+<p>2.将任何现有的精灵图集分配到该字段。</p>
+
+<p>3.进入播放模式或运行播放器。</p>
+
+<p>4.访问该变量，并注意现在可以调用属性“.GetSprites”来获取此图集内包含的精灵数组。</p>
+
+<h3>后期绑定</h3>
+
+<p>精灵可在运行时以“打包但不引用任何图集”的方式启动，并在图集绑定到该精灵之前将显示为空白。这种行为的好处是，如果图集的来源在启动期间不可用（例如从网上下载的资源包），则允许用户有机会进行后期绑定。</p>
+
+<h3>通过回调进行后期绑定</h3>
+
+<p>1.只要精灵打包到任何精灵图集内，但精灵图集未绑定为默认图集（例如未选中“Include in build”选项），精灵便会在场景中不可见。</p>
+
+<p>2.用户可以监听回调 SpriteAtlas.atlasRequested。</p>
+
+<p>3.此委托方法将提供一个要绑定的图集标签和一个接受 SpriteAtlas 资源的 System.Action。用户应按任意方式（脚本引用、Resources.load、资源包）加载该资源，并将该资源提供给 System.Action。</p>
+
+<h2><br></h2>
+
+<ul>
+<li><p><span class="page-edit">2017–05–26 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> 中的新功能 <span class="search-words">NewIn20171</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-SpriteMask.html"></a></span><div class="tip">精灵遮罩</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Tilemap.html"></a></span><div class="tip">Tilemap</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2018.1</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
