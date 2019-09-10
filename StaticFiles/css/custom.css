@@ -1,8 +1,46 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #fff;
+    --main-text-color: #1b2229;
+    --nextprev-bar-bg-color: #f0f0f0;
+  }
+}
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #2b2c2f;
+    --main-text-color: #fff;
+    --nextprev-bar-bg-color: hsla(0, 0%, 30%, 1);
+  }
+}
+
+#master-wrapper {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+li:before {
+  color: var(--main-text-color) !important;
+}
+
+.nextprev {
+  background: var(--nextprev-bar-bg-color);
+}
 
 body {
-
   overflow-x: hidden !important;
+}
+
+#master-wrapper h1,
+#master-wrapper h2,
+#master-wrapper h3,
+#master-wrapper h4,
+#master-wrapper h5 {
+  color: inherit !important;
+}
+
+#master-wrapper a {
+  color: inherit !important;
 }
 
 div.arrow {
@@ -137,7 +175,9 @@ div.lang-switcher div.lang-list a:hover {
   background: #f0f0f0;
 }
 
-button.btn-open-survey{display:none !important;}
+button.btn-open-survey {
+  display: none !important;
+}
 
 .master-wrapper {
   display: flex !important;
@@ -148,10 +188,6 @@ button.btn-open-survey{display:none !important;}
   float: none !important;
   min-width: 340px;
   position: fixed !important;
-}
-
-.sidebar-wrap {
-  background-color: white;
 }
 
 .content-wrap {
@@ -178,13 +214,15 @@ button.btn-open-survey{display:none !important;}
   cursor: pointer;
 }
 
-#nav-open span, #nav-open span:before, #nav-open span:after {
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
   position: absolute;
   height: 3px; /*線の太さ*/
   width: 25px; /*長さ*/
   border-radius: 3px;
   display: block;
-  content: '';
+  content: "";
   cursor: pointer;
   background: white;
 }
@@ -269,7 +307,7 @@ div.sidebar .version-switcher {
     float: left;
     margin: 0 1px 0 0;
     font-size: 1em;
-    font-family: 'avalon', sans-serif;
+    font-family: "avalon", sans-serif;
   }
 
   .nav-menu-items .menu-item a {
@@ -356,7 +394,9 @@ pre {
   padding: 10px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font-family: inherit;
 }
 
@@ -377,52 +417,141 @@ div.sidebar-menu h2 {
 }
 
 table {
-  width:100%;
+  width: 100%;
 }
 
-th{
+th {
   min-width: 120px;
 }
 
 td:nth-child(2n) {
-  word-break:break-all;
+  word-break: break-all;
 }
 
 td div {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /****************************************
   ==== CONTENT
 ****************************************/
 
-div.signature { margin: 0 0 40px 0; font-size: 0.875em; }
-div.signature div.sig-block { margin: 0 0 3px 0; }
-div.signature .sig-kw { font-weight: bold; }
-.switch-link { margin: 10px 0 0 0; }
-.suggest { float: left; margin: 10px 5px 0 0; position: relative; }
+div.signature {
+  margin: 0 0 40px 0;
+  font-size: 0.875em;
+}
+div.signature div.sig-block {
+  margin: 0 0 3px 0;
+}
+div.signature .sig-kw {
+  font-weight: bold;
+}
+.switch-link {
+  margin: 10px 0 0 0;
+}
+.suggest {
+  float: left;
+  margin: 10px 5px 0 0;
+  position: relative;
+}
 
-table.list { width: 100%; margin: 0px 0 30px 0; font-size: 0.875em; }
-table.list tbody { border-top: #e6e6e6 0px solid; }
-table.list tr { -webkit-transition: background .15s; -moz-transition: background .15s; -ms-transition: background .15s; -o-transition: background .15s; transition: background .15s; }
-table.list tr:nth-child(odd) { background: #f8f8f8; }
-table.list tr:hover { outline: #00cccc 1px solid; }
-table.list td { vertical-align: top; padding: 7px 10px; }
-table.list td.lbl { width: 18%; }
-table.list td.desc { width: 82%; }
-table.list td.name { font-weight: 700; }
-.content .section ul {  list-style-type: none; margin: 0 0 20px 0; }
-.content .section ul li, .content .section ol li ul li { max-width: 1100px; padding: 0 0 3px 20px; background: none; position: relative; font-size: 0.875em; }
-.content .section ul li:before { content: "\2022"; font-size: 1.8em; position: absolute; top: 0; left: 0; color: #455463; }
-.content .section ul li ul, .content .section ul li ul li ul { margin: 0 0 5px 0; }
-.content .section ul li ul li:before { content: "\22C5"; }
-.content .section ul li ul li, .content .section ul li ul li ul li, .content .section ol li ul li { font-size: 1em; }
-.content .section ol { margin: 0 0 20px 0; padding: 0 0 0 20px; }
-.content .section ol li { padding: 0 0 5px 0; font-size: 0.875em; }
-.content .section ul li ol { margin: 0 0 5px 0; }
-.content .section ul li ol li:before { display: none; }
-.content .section ul li p, .content .section ol li p { font-size: 1em; margin: 0; }
-.content .section ul li img, .content .section ol li img { margin: 10px 0 5px 0; }
-.content figure { margin: 0 0 30px 0; }
-.content figure img { margin: 0 0 10px 0; }
-.content figure figcaption { margin: 0 0 10px 0; font-size: 0.875em; color: #99a0a7; }
+table.list {
+  width: 100%;
+  margin: 0px 0 30px 0;
+  font-size: 0.875em;
+}
+table.list tbody {
+  border-top: #e6e6e6 0px solid;
+}
+table.list tr {
+  -webkit-transition: background 0.15s;
+  -moz-transition: background 0.15s;
+  -ms-transition: background 0.15s;
+  -o-transition: background 0.15s;
+  transition: background 0.15s;
+}
+table.list tr:nth-child(odd) {
+  background: #f8f8f8;
+}
+table.list tr:hover {
+  outline: #00cccc 1px solid;
+}
+table.list td {
+  vertical-align: top;
+  padding: 7px 10px;
+}
+table.list td.lbl {
+  width: 18%;
+}
+table.list td.desc {
+  width: 82%;
+}
+table.list td.name {
+  font-weight: 700;
+}
+.content .section ul {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+}
+.content .section ul li,
+.content .section ol li ul li {
+  max-width: 1100px;
+  padding: 0 0 3px 20px;
+  background: none;
+  position: relative;
+  font-size: 0.875em;
+}
+.content .section ul li:before {
+  content: "\2022";
+  font-size: 1.8em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #455463;
+}
+.content .section ul li ul,
+.content .section ul li ul li ul {
+  margin: 0 0 5px 0;
+}
+.content .section ul li ul li:before {
+  content: "\22C5";
+}
+.content .section ul li ul li,
+.content .section ul li ul li ul li,
+.content .section ol li ul li {
+  font-size: 1em;
+}
+.content .section ol {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+}
+.content .section ol li {
+  padding: 0 0 5px 0;
+  font-size: 0.875em;
+}
+.content .section ul li ol {
+  margin: 0 0 5px 0;
+}
+.content .section ul li ol li:before {
+  display: none;
+}
+.content .section ul li p,
+.content .section ol li p {
+  font-size: 1em;
+  margin: 0;
+}
+.content .section ul li img,
+.content .section ol li img {
+  margin: 10px 0 5px 0;
+}
+.content figure {
+  margin: 0 0 30px 0;
+}
+.content figure img {
+  margin: 0 0 10px 0;
+}
+.content figure figcaption {
+  margin: 0 0 10px 0;
+  font-size: 0.875em;
+  color: #99a0a7;
+}

@@ -217,7 +217,7 @@ div.sidebar-menu h2 { margin: 20px 0; padding: 0 0 10px 0; border-bottom: #e6e6e
 div.sidebar-menu ul { list-style-type: none; margin: 0 0 20px 0; position: relative; }
 div.sidebar-menu ul li { font-size: 0.875em; word-wrap: break-word; margin: 0 0 8px 0; line-height: 1.3em; padding: 0 0 0 22px; position: relative; }
 div.sidebar-menu ul li.nl span { cursor: pointer; }
-div.sidebar-menu ul li div.leafnode { width: 12px; height: 12px; border: #ffffff 1px solid; position: absolute; top: 2px; left: 0; background: #ffffff url(../images/sprites.png) 0 0 no-repeat;background-position: -51px -129px;  }
+div.sidebar-menu ul li div.leafnode { width: 12px; height: 12px; border: #ffffff00 1px solid; position: absolute; top: 2px; left: 0; background: #ffffff00 url(../images/sprites.png) 0 0 no-repeat;background-position: -51px -129px;  }
 div.sidebar-menu ul li div.arrow { width: 12px; height: 12px; cursor: pointer; border: #19e3b1 1px solid; position: absolute; top: 2px; left: 0; background: #19e3b1 url(../images/sprites.png) 0 0 no-repeat; }
 div.sidebar-menu ul li div.collapsed { background-position: -51px -61px; }
 div.sidebar-menu ul li div.expanded { background-position: -51px -95px; }
