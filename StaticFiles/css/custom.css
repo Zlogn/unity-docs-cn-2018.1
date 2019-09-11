@@ -17,6 +17,8 @@
 #master-wrapper {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  margin: inherit !important;
+  height: 100% !important;
 }
 
 li:before {
@@ -27,7 +29,8 @@ li:before {
   background: var(--nextprev-bar-bg-color);
 }
 
-body {
+html, body {
+  height: 100%;
   overflow-x: hidden !important;
 }
 
